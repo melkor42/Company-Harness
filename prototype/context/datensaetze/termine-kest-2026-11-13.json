@@ -1,0 +1,12 @@
+{
+  "id": "termine-kest-2026-11-13",
+  "kind": "commitment",
+  "statement": "Abnahme Gesamtsystem PRJ-KEST-1 am 2026-11-13. Eine Verschiebung bedarf der schriftlichen Bestätigung des Auftraggebers.",
+  "source": "prototype/context/quellen/kestenholt-auftrag-2026-04-08.md",
+  "stand": "2026-04-08",
+  "owner": "rolle:projektleitung",
+  "scope": ["fall:CHANGE-01"],
+  "status": "belegt",
+  "synthetisch": true,
+  "valid_until": "2026-11-13"
+}

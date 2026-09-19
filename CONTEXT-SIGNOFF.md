@@ -125,8 +125,16 @@ verantwortet. Das ist eine zu prüfende Segmentwahl, kein belegter Markt.
 | [`CONTEXT-SIGNOFF.md`](CONTEXT-SIGNOFF.md) | Dieses Dokument; Einstieg für jede neue Session | Stand 2026-09-19 |
 | [`AGENTS.md`](AGENTS.md) | Arbeitsregeln für Agents in diesem Workspace | neu, 2026-09-19 |
 | [`docs/product-plan.md`](docs/product-plan.md) | Produktthese, Prozessbeispiele, Architektur, Wettbewerbs- und Ersetzbarkeitsvergleich, Marktansatz, Build-or-Reuse-Experiment — mit 16 Quellenbelegen | verschoben aus dem Delta-Weave-Hub, 2026-09-19 |
-| [`docs/prototype-plan.md`](docs/prototype-plan.md) | Umsetzungsplan des Prototyps: Leitfrage, Grenzen, vier Datenverträge, synthetisches Fallmaterial, Messprotokoll, Meilensteine M0–M5 mit Abbruchbedingungen | neu, 2026-09-19; aufbauend auf §10 dieses Dokuments |
+| [`docs/prototype-plan.md`](docs/prototype-plan.md) | Umsetzungsplan des Prototyps: Leitfrage, Grenzen, vier Datenverträge, synthetisches Fallmaterial, Messprotokoll, Meilensteine M0–M5 mit Abbruchbedingungen | neu, 2026-09-19; aufbauend auf §10 dieses Dokuments. **M0 und M1 gebaut, Stand 2026-09-20** — Beschreibungen folgen den Dateien |
 | [`docs/sources/konzept-ursprung-2026-09-19.md`](docs/sources/konzept-ursprung-2026-09-19.md) | Manuels ursprüngliche Konzeptfassung (Sicherung der Session-Anlage) | Kopie der Anlage, Quelltext unverändert |
+| [`schema/`](schema/) | Fünf JSON-Schemas: Kontextdatensatz, Prozessdefinition, Fall, Fallzustand, Aktion | gebaut 2026-09-19/20; Verträge sind hier verbindlich, nicht im Fließtext |
+| [`prototype/KORPUS.md`](prototype/KORPUS.md) | Die erfundene Firma Nordwind Betriebstechnik: Rollen, zwei Kunden, Zahlensatzung, Kennzeichnung als Kunst | gebaut 2026-09-19; durchgehend synthetisch, `synthetisch: true` in jedem Datensatz |
+| [`prototype/context/`](prototype/context/) | Sechs erfundene Quelldokumente und zwanzig daraus extrahierte Kontextdatensätze | gebaut 2026-09-19/20, validiert |
+| [`prototype/processes/`](prototype/processes/) | Die zwei Prüfprozesse als versionierte Definitionen mit Allowlist | gebaut 2026-09-19, validiert |
+| [`prototype/cases/`](prototype/cases/) | Vier Fälle: Eingang, Fallakte und **vor dem Lauf geschriebenes** erwartetes Ergebnis | gebaut 2026-09-19/20; gegenzulesen von jemand ohne Vorwissen (§2 des Messprotokolls) |
+| [`prototype/sandbox-systems/`](prototype/sandbox-systems/) | Vier Schreibziele statt echter Anschlüsse: Projektplan, Zeiterfassung, Rechnungsentwurf, Postausgang | gebaut 2026-09-19; die einzigen erlaubten Schreibziele |
+| [`prototype/tools/validate.mjs`](prototype/tools/validate.mjs) | Der Validator: Quelle muss existieren, scope muss passen, Erfundenes muss als erfunden stehen, Allowlist gilt | gebaut 2026-09-19/20, jede Prüfung einzeln mit Negativbeleg |
+| [`prototype/evaluation/MESSPROTOKOLL.md`](prototype/evaluation/MESSPROTOKOLL.md) | A/B-Bedingungen, Bestehensregel, Vergleichsmaßstab, Erfassungsfelder — **vor dem ersten Lauf** aufgeschrieben | Stand 2026-09-20; noch kein Lauf, keine Zahl eingetragen |
 
 **Außerhalb dieses Workspaces, aber relevant:**
 
@@ -226,6 +234,14 @@ Reihenfolge, nicht Termine. Jeder Schritt hat eine erkennbare Abbruchbedingung.
 **Stand 2026-09-19:** Diese Liste ist in [`docs/prototype-plan.md`](docs/prototype-plan.md) §7 zu
 Meilensteinen M0–M5 mit je einer Abbruch- und einer Fertig-Bedingung ausgearbeitet; Schritt 5 und 6 sind
 dort M5 und M4. Die Liste unten bleibt als ursprüngliche Fassung stehen.
+
+**Stand 2026-09-20:** Schritt 1 und 2 sind gebaut. Schritt 1 erfüllt, soweit ein Agent ihn erfüllen kann:
+vier Fälle, zwanzig Datensätze, sechs Quelldokumente, erwartete Ergebnisse vor jedem Lauf geschrieben. Sein
+Fertig-Kriterium — *ein Prüfer ohne Vorwissen sagt, ob das Ergebnis stimmt* — ist damit **nicht** erreicht,
+weil der Schreiber nicht der Prüfer sein darf; die Bedingung steht offen im Messprotokoll §2. Schritt 2 ist
+erfüllt: beide Prozesse liegen als versionierte Dateien mit Allowlist unter `prototype/processes/`, und die
+Allowlist wird maschinell geprüft, nicht nur beschrieben. Schritt 3 ist der nächste und braucht nichts außer
+einer Qoder-Sitzung.
 
 1. **Fallmaterial anlegen.** Zwei synthetische oder ausdrücklich freigegebene Fälle je Prozess:
    eingehende Änderung, vereinbarter Umfang, Kapazität, kaufmännische Regeln, erwartetes Ergebnis.

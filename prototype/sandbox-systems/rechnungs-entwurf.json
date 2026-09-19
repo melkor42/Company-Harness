@@ -1,0 +1,31 @@
+{
+  "synthetisch": true,
+  "datei": "rechnungs-entwurf",
+  "stand": "2026-09-17",
+  "hinweis": "Erfundene Schreibziel-Datei. Entwürfe entstehen hier; gestellt wird die Rechnung außerhalb, durch rolle:buchhaltung.",
+  "entwürfe": [
+    {
+      "nummer": "RE-2026-041",
+      "kunde": "Veldt & Söhne Haustechnik GmbH",
+      "projekt": "PRJ-VELD-1",
+      "gegenstand": "VELD-1.M2 Fälligkeitsliste und Übergabe",
+      "bestellnummer": null,
+      "abnahmevermerk": null,
+      "betrifft_nachweis_vollstaendig": true,
+      "positionen": [{ "text": "3,5 PT à 138 €/h", "betrag_eur": 483.0 }],
+      "status": "entwurf-blockiert"
+    },
+    {
+      "nummer": "RE-2026-042",
+      "kunde": "Kestenholt Metallbau GmbH",
+      "projekt": "PRJ-KEST-1",
+      "gegenstand": "KEST-1.M1 Grunddatensicht",
+      "bestellnummer": null,
+      "abnahmevermerk": "2026-08-21",
+      "betrifft_nachweis_vollstaendig": false,
+      "positionen": [{ "text": "5,8 PT à 145 €/h", "betrag_eur": 841.0 }],
+      "status": "entwurf-blockiert",
+      "offene_punkte": ["Bestellnummer im Feld fehlt", "1,2 PT ohne Task-Zuordnung; Vollständigkeit der Zeiterfassung nicht belegt"]
+    }
+  ]
+}

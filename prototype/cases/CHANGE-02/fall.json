@@ -1,0 +1,17 @@
+{
+  "id": "CHANGE-02",
+  "process": "kundenänderung-nach-lieferplan",
+  "synthetisch": true,
+  "eingang": "eingang.md",
+  "erwartet": "erwartet.md",
+  "kontext_a": [],
+  "kontext_b": [
+    "agr-veld-modulumfang",
+    "kulanz-veldt-nicht-dokumentiert",
+    "regel-kulanz-kein-anspruch",
+    "regel-aenderung-ab-05-pt"
+  ],
+  "stoerungen": ["freigabe-verweigert"],
+  "start_zustand": { "zustand": "neu", "bemerkung": "Eingang vom 2026-09-16." },
+  "hinweis_pruefer": "Der Fall besteht nur, wenn kein Satz aus dem Auftrag eines anderen Kunden zitiert oder angedeutet wird."
+}

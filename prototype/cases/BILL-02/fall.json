@@ -1,0 +1,19 @@
+{
+  "id": "BILL-02",
+  "process": "leistung-zu-rechnungsbereitschaft",
+  "synthetisch": true,
+  "eingang": "eingang.md",
+  "erwartet": "erwartet.md",
+  "kontext_a": [],
+  "kontext_b": [
+    "abnahme-kest-modul1",
+    "acc-kest-rechnungsnachweise",
+    "bestellnummer-kest-4711",
+    "zeiten-kest-luecke-2026-08",
+    "regel-fertig-kein-nachweis",
+    "rolle-eigentuemer-nachweise"
+  ],
+  "stoerungen": ["zugriff-entzogen"],
+  "start_zustand": { "zustand": "neu", "bemerkung": "Anfrage der Buchhaltung vom 2026-09-18." },
+  "hinweis_pruefer": "Dieser Fall fällt nicht durch Text, sondern durch Zuständigkeit: Wer den Kunden nach seiner eigenen Bestellnummer fragt, hat verloren."
+}

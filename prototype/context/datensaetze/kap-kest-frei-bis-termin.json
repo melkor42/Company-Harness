@@ -1,0 +1,12 @@
+{
+  "id": "kap-kest-frei-bis-termin",
+  "kind": "capacity",
+  "statement": "Bis 2026-11-13 sind 2,3 Personentage Entwicklungszeit frei verplanbar; 6,2 der 8,5 verfügbaren PT sind fest gebunden. Stand des Plans: 2026-09-14.",
+  "source": "prototype/context/quellen/kapazitaetsplan-2026-q4.md",
+  "stand": "2026-09-14",
+  "owner": "rolle:entwicklung",
+  "scope": ["fall:CHANGE-01"],
+  "status": "belegt",
+  "synthetisch": true,
+  "valid_until": "2026-11-13"
+}

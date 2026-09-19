@@ -1,0 +1,14 @@
+{
+  "synthetisch": true,
+  "datei": "zeiterfassung",
+  "stand": "2026-09-17",
+  "hinweis": "Erfundene Schreibziel-Datei; Eigentümer der Einträge ist rolle:entwicklung.",
+  "einträge": [
+    { "von": "2026-07-06", "bis": "2026-08-15", "task": "KEST-1.M1", "pt": 5.0, "erfasst_von": "rolle:entwicklung" },
+    { "von": "2026-08-17", "bis": "2026-08-18", "task": "KEST-1.M1", "pt": 0.8, "erfasst_von": "rolle:entwicklung" },
+    { "von": "2026-08-19", "bis": "2026-08-21", "task": "SAMMEL-2026-34", "pt": 1.2, "erfasst_von": "rolle:entwicklung", "unzugeteilt": true },
+    { "von": "2026-08-24", "bis": "2026-09-11", "task": "KEST-1.M2", "pt": 4.1, "erfasst_von": "rolle:entwicklung" },
+    { "von": "2026-06-02", "bis": "2026-06-30", "task": "KEST-1.M1", "pt": 1.5, "erfasst_von": "rolle:entwicklung", "vermerk": "Formatkonvertierung, nicht berechnet (Kulanz 2026-06-30)" },
+    { "von": "2026-08-03", "bis": "2026-09-15", "task": "VELD-1.M2", "pt": 3.5, "erfasst_von": "rolle:entwicklung" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "id": "kap-veldt-liegt-vor",
+  "kind": "capacity",
+  "statement": "PRJ-VELD-1 hat den Termin 2026-10-30 und liegt zeitlich vor PRJ-KEST-1. Entwicklungszeit, die für Kestenholt umgeschichtet wird, verschiebt den Veldt-Termin.",
+  "source": "prototype/context/quellen/kapazitaetsplan-2026-q4.md",
+  "stand": "2026-09-14",
+  "owner": "rolle:entwicklung",
+  "scope": ["fall:CHANGE-01"],
+  "status": "belegt",
+  "synthetisch": true
+}

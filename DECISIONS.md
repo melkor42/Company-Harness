@@ -106,3 +106,49 @@ nachgelesen: Company Harness steht auf keiner der drei Listen der Freigabeliste,
 Knoten mit „intern, keine Veröffentlichungsfreigabe". Am Ergebnis ändert sich nichts — privates Repo
 zulässig, jedes Zitat nach außen nicht. Festzuhalten bleibt der Fehler: **Nicht aus einem geblockten `ls`
 auf unlesbare Inhalte schließen.**
+
+## 2026-09-20 — M0 und M1 gebaut; der Validator ist die Durchsetzungsstelle
+
+**Entscheidung:** Die vier Verträge liegen als JSON-Schema unter `schema/` und als Beispieldateien unter
+`prototype/`. Der Korpus ist eine erfundene Firma mit sechs Quelldokumenten, zwanzig Kontextdatensätzen,
+zwei Prozessen, vier Fällen und vier Sandbox-Schreibzielen. `node prototype/tools/validate.mjs` prüft den
+Bestand; jede Prüfung ist mit einem Negativbeleg verifiziert.
+
+**Fünf Punkte, die beim Bauen anders kamen als im Plan und hier nachgezogen sind:**
+
+1. **Ein fünftes Schema.** Der Fallvertrag hat zwei Dateien: `fall.json` (unveränderlich) und
+   `runs/<fall>/state.json` (der wandernde Zustand). Ohne eigenes Schema wäre der Zustand — die eigentliche
+   Behauptung des Produkts — der einzige ungeprüfte Teil des Bestands geblieben.
+2. **Ein viertes Sandbox-System.** `postausgang.json` kam dazu, weil die Kundennachricht die Aktion ist, an
+   der sich Duplikat-Schutz und nutzlastgebundene Freigabe zeigen muss. Drei Dateien hätten das nicht
+   geprüft, sondern behauptet.
+3. **Die Laufprüfungen sitzen im Validator, nicht erst in der Engine.** Eine Aktion, die ihre
+   Prozessdefinition nicht vorsieht, ein abweichendes Schreibziel, `ausgeführt` ohne Freigabeeintrag, ein
+   Idempotenzschlüssel zweimal: Das wird jetzt ab M1 abgewiesen, obwohl die Engine erst in M4 entsteht. Eine
+   Allowlist, die nur im Kopf des späteren Programms existiert, ist keine Grenze.
+4. **Ein Muster ist kein Kalender.** `stand` war gegen `\d{4}-\d{2}-\d{2}` geprüft und ließ `2026-02-30`
+   durch. Seither prüft der Validator den Kalenderdatum-Wert, nicht nur seine Form.
+5. **`supersedes` war ein Feld ohne Benutzung.** Die Störung „Evidenz ändert sich nach der Freigabe" war nur
+   im erwarteten Ergebnis beschrieben. Jetzt liegt der Nachfolger-Datensatz mit `supersedes` real im Korpus
+   (`kap-kest-frei-bis-termin-2026-09-21`, 0,8 PT statt 2,3 PT) — sonst könnte M2 die Störung nicht setzen.
+
+**Zwei eigene Fehler, aufgeschrieben damit sie sich nicht wiederholen:** Der Verzeichnisläufer des
+Validators hatte bei verschachtelten Ordnern den Präfix doppelt gesetzt; dadurch liefen die
+Fallordner-Prüfungen in M0 nie an, obwohl der Lauf „OK" meldete. Entdeckt wurde er erst, als Fälle
+existierten — **ein Prüfer, der nichts findet, weil er nichts sieht, ist kein Prüfstand.** Und die
+Anordnung `/aktion.*\.json$/` hätte eine `state.json` in `runs/` still übersprungen; seither fällt jede
+JSON-Datei dort, die auf keine Zuordnung passt, als Fehler auf.
+
+## 2026-09-20 — M1 heißt „gebaut", nicht „bestanden"
+
+**Entscheidung:** In der Meilensteintabelle des Prototyp-Plans steht M1 auf **gebaut, nicht bestanden**. Der
+Prüferspruch — ein Mensch ohne Vorwissen sagt je Fall „stimmt" oder „stimmt nicht" — steht aus.
+
+**Grund:** Die Fälle, ihre erwarteten Ergebnisse und dieser Bestand stammen aus einer Hand (Agent,
+2026-09-19/20). Die Regel „wer den Fall geschrieben hat, darf ihn nicht ausgewertet haben" gilt auch gegen
+den eigenen Befund: Ein vorab geschriebenes Ergebnis ist nur dann ein Maßstab, wenn jemand anderes es
+gegenlesen hat. M2 gegen einen unbestätigten Maßstab laufen zu lassen wäre ein Nachweis ins Leere.
+
+**Anwendung:** Vor dem ersten A/B-Lauf ist `prototype/cases/*/erwartet.md` von einer Person ohne
+Sitzungsvorwissen gegenzulesen; das Ergebnis kommt in `prototype/evaluation/MESSPROTOKOLL.md` §2 und diese
+Zeile gilt als erledigt.

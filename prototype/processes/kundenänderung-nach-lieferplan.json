@@ -1,0 +1,27 @@
+{
+  "id": "kundenänderung-nach-lieferplan",
+  "version": 1,
+  "synthetisch": true,
+  "trigger": { "art": "eingang", "erwartet": "Kundenwunsch nach Umfangsänderung, der terminiert oder kostenlos erwartet wird" },
+  "required_evidence": ["agreement", "capacity", "rule", "commitment"],
+  "allowed_actions": [
+    { "name": "umfangsoptionen-entwickeln", "requires_approval": false },
+    { "name": "entscheidungsvorlage-erstellen", "requires_approval": false },
+    { "name": "eigentuemer-anfragen", "requires_approval": false, "target": "sandbox-systems/postausgang.json" },
+    { "name": "kundenachricht-versenden", "requires_approval": true, "target": "sandbox-systems/postausgang.json" },
+    { "name": "projektplan-aktualisieren", "requires_approval": true, "target": "sandbox-systems/projektplan.json" }
+  ],
+  "checkpoints": [
+    "wunsch-und-zusage-getrennt",
+    "betroffene-arbeit-benannt",
+    "optionen-an-realer-kapazitaet-geprüft",
+    "folgen-anderer-projekte-benannt",
+    "abgleich-vereinbart-gegen-operativ-vor-abschluss"
+  ],
+  "abort_conditions": [
+    "vereinbarter Umfang ist nicht auffindbar",
+    "die Entscheidung erfordert eine Preisbindung ohne Freigabe von rolle:inhaber",
+    "ein Kontextdatensatz eines anderen Kunden würde offengelegt"
+  ],
+  "escalation": "rolle:inhaber"
+}

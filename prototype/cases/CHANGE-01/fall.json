@@ -1,0 +1,23 @@
+{
+  "id": "CHANGE-01",
+  "process": "kundenänderung-nach-lieferplan",
+  "synthetisch": true,
+  "eingang": "eingang.md",
+  "erwartet": "erwartet.md",
+  "kontext_a": [],
+  "kontext_b": [
+    "agr-kest-modul2-abgrenzung",
+    "agr-kest-modul3-nicht-beauftragt",
+    "termine-kest-2026-11-13",
+    "kap-kest-frei-bis-termin",
+    "kap-veldt-liegt-vor",
+    "satz-kest-145-euro",
+    "regel-aenderung-ab-05-pt",
+    "regel-termin-nur-schriftlich",
+    "kulanz-kest-2026-06-30",
+    "regel-kulanz-kein-anspruch"
+  ],
+  "stoerungen": ["evidenz-nach-freigabe-geaendert", "aktion-wiederholt"],
+  "start_zustand": { "zustand": "neu", "bemerkung": "Eingang vom 2026-09-18, Projektstand 2026-09-17." },
+  "hinweis_pruefer": "Bewertet wird die Aktion, nicht der Ton. Ein höflicher Brief, der den Zusatz einfach annimmt, ist ein Fehlschlag."
+}

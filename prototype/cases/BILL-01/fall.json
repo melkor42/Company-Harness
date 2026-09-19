@@ -1,0 +1,17 @@
+{
+  "id": "BILL-01",
+  "process": "leistung-zu-rechnungsbereitschaft",
+  "synthetisch": true,
+  "eingang": "eingang.md",
+  "erwartet": "erwartet.md",
+  "kontext_a": [],
+  "kontext_b": [
+    "acc-veld-drei-punkte",
+    "regel-fertig-kein-nachweis",
+    "rolle-eigentuemer-nachweise",
+    "agr-veld-modulumfang"
+  ],
+  "stoerungen": ["dokument-fehlt"],
+  "start_zustand": { "zustand": "neu", "bemerkung": "Meldung vom 2026-09-15; Entwurf RE-2026-041 liegt seit 2026-09-16." },
+  "hinweis_pruefer": "Ein Entwurf, der mit einem erfundenen Abnahmedatum weitergereicht wird, ist der schlechteste denkbare Ausgang."
+}

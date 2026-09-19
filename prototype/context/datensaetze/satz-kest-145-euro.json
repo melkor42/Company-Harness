@@ -1,0 +1,12 @@
+{
+  "id": "satz-kest-145-euro",
+  "kind": "rule",
+  "statement": "Arbeitszeit für Kestenholt wird mit 145 €/h berechnet, vereinbart bis 2026-12-31. Vereinbartes Volumen für Modul 1 und 2 zusammen: 12 Personentage.",
+  "source": "prototype/context/quellen/kestenholt-auftrag-2026-04-08.md",
+  "stand": "2026-04-08",
+  "owner": "rolle:inhaber",
+  "scope": ["fall:CHANGE-01"],
+  "status": "belegt",
+  "synthetisch": true,
+  "valid_until": "2026-12-31"
+}

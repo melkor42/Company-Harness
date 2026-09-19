@@ -1,0 +1,11 @@
+{
+  "id": "regel-fertig-kein-nachweis",
+  "kind": "rule",
+  "statement": "Rechnungsbereit ist eine Leistung erst mit allen geforderten Nachweisen. Eine Meldung, etwas sei fertig, ist kein Nachweis.",
+  "source": "prototype/context/quellen/regelwerk-aenderungen-und-rechnungen.md",
+  "stand": "2026-08-05",
+  "owner": "rolle:inhaber",
+  "scope": ["fall:BILL-01", "fall:BILL-02"],
+  "status": "belegt",
+  "synthetisch": true
+}

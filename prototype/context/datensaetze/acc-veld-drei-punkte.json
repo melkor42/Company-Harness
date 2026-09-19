@@ -1,0 +1,11 @@
+{
+  "id": "acc-veld-drei-punkte",
+  "kind": "acceptance",
+  "statement": "Rechnungen zu PRJ-VELD-1 erfordern alle drei Punkte: unterzeichnetes Abnahmeprotokoll des Meilensteins, Bestellnummer 2026-118 im Feld Bestellnummer, Vorgangsdokumentation je abgeschlossenem Vorgang.",
+  "source": "prototype/context/quellen/veldt-auftrag-2026-05-19.md",
+  "stand": "2026-05-19",
+  "owner": "rolle:projektleitung",
+  "scope": ["fall:BILL-01"],
+  "status": "belegt",
+  "synthetisch": true
+}

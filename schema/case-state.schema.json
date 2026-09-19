@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://company-harness.local/schema/case-state",
+  "title": "Fallzustand",
+  "description": "Der Zustand eines Laufs, abgelegt in runs/<fall>/state.json. Ein Zustand, der nur im Chatverlauf existiert, ist keiner — deshalb steht er hier und wird gegen die Zustandsmaschine geprüft.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["fall", "zustand", "seit", "synthetisch"],
+  "properties": {
+    "fall": { "type": "string", "pattern": "^(CHANGE|BILL)-[0-9]{2}$" },
+    "zustand": {
+      "enum": [
+        "neu", "gesichtet", "entscheidung-nötig", "freigegeben", "ausgeführt", "abgleich",
+        "abgeschlossen", "blockiert", "abgebrochen", "wartet-auf-eigentümer"
+      ]
+    },
+    "seit": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}", "format": "datum-zeit" },
+    "offene_frage": { "type": "string" },
+    "wartet_bei": { "type": ["string", "null"], "pattern": "^(rolle|person):[^ ]+$" },
+    "fortgesetzt_am": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}", "format": "datum-zeit" },
+    "bemerkung": { "type": "string" },
+    "synthetisch": { "const": true }
+  }
+}

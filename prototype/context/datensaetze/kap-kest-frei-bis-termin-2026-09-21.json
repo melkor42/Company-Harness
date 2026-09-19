@@ -1,0 +1,13 @@
+{
+  "id": "kap-kest-frei-bis-termin-2026-09-21",
+  "kind": "capacity",
+  "statement": "Seit dem Nachtrag vom 2026-09-21 sind 1,5 PT für die Wartung der Werkzeugmaschinensteuerung gebunden; frei verplanbar sind bis 2026-11-13 noch 0,8 PT statt 2,3 PT.",
+  "source": "prototype/context/quellen/kapazitaetsplan-2026-q4.md",
+  "stand": "2026-09-21",
+  "owner": "rolle:entwicklung",
+  "scope": ["fall:CHANGE-01"],
+  "status": "belegt",
+  "valid_until": "2026-11-13",
+  "supersedes": "kap-kest-frei-bis-termin",
+  "synthetisch": true
+}

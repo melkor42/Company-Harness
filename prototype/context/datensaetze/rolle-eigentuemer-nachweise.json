@@ -1,0 +1,11 @@
+{
+  "id": "rolle-eigentuemer-nachweise",
+  "kind": "fact",
+  "statement": "Fehlende Nachweise werden bei ihrem Eigentümer angefragt: Zeiterfassung bei der Entwicklung, Abnahmeprotokoll bei der Projektleitung. Eine Bestellnummer steht im Vertrag und ist keine Nachfrage beim Kunden würdig. Die Rechnung stellt die Buchhaltung.",
+  "source": "prototype/context/quellen/regelwerk-aenderungen-und-rechnungen.md",
+  "stand": "2026-08-05",
+  "owner": "rolle:inhaber",
+  "scope": ["fall:BILL-01", "fall:BILL-02"],
+  "status": "belegt",
+  "synthetisch": true
+}

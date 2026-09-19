@@ -1,0 +1,24 @@
+{
+  "id": "leistung-zu-rechnungsbereitschaft",
+  "version": 1,
+  "synthetisch": true,
+  "trigger": { "art": "meldung", "erwartet": "Meldung, eine Leistung sei fertig, ohne dass die Rechnungsgrundlage geprüft ist" },
+  "required_evidence": ["acceptance", "rule", "fact", "agreement"],
+  "allowed_actions": [
+    { "name": "nachweisabgleich-erstellen", "requires_approval": false },
+    { "name": "eigentuemer-anfragen", "requires_approval": false, "target": "sandbox-systems/postausgang.json" },
+    { "name": "rechnungsentwurf-ergaenzen", "requires_approval": true, "target": "sandbox-systems/rechnungs-entwurf.json" }
+  ],
+  "checkpoints": [
+    "fertigmeldung-und-rechnungsbereitschaft-getrennt",
+    "fehlender-punkt-eindeutig-benannt",
+    "nachweis-beim-eigenen-eigentümer-angefragt",
+    "betrag-nur-gegen-verbindliche-preise",
+    "stellung-der-rechnung-bleibt-bei-rolle:buchhaltung"
+  ],
+  "abort_conditions": [
+    "Abnahmevoraussetzungen sind für den Vorgang nicht dokumentiert",
+    "der Entwurf würde einen Betrag ohne Nachweisgrundlage einstellen"
+  ],
+  "escalation": "rolle:projektleitung"
+}
