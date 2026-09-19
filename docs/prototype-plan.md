@@ -32,7 +32,7 @@ merely make the wording more personal.*
 
 ## 2. Grenzen
 
-**Drin:** ein Betreiber (Manuel), ein Prüfer, synthetische Fälle, ein lokaller Rechner, keine
+**Drin:** ein Betreiber (Manuel), ein Prüfer, synthetische Fälle, ein lokaler Rechner, keine
 Netzwerkverbindungen zu Geschäftssystemen.
 
 **Draußen — und nicht als spätere Phase getarnt:**
@@ -43,7 +43,7 @@ Netzwerkverbindungen zu Geschäftssystemen.
 | Oracle AI Database 26ai | `CONTEXT-SIGNOFF.md` §10 Schritt 6: erst wenn reale Daten- und Retrieval-Anforderungen es begründen |
 | Hexis-Bereitstellung | braucht freigegebene Container-Umgebung und Lizenzprüfung am Quelltext (§7) |
 | Mehrbenutzer, Mandantenfähigkeit, Rollenverwaltung | kein Nachweis vor dem ersten Prozessergebnis |
-| Weißes Etikett, Vertrieb, Preise | `product-plan.md`: keine validierten Preisbänder |
+| White-Label, Vertrieb, Preise | `product-plan.md`: keine validierten Preisbänder |
 | Unbeaufsichtigter Betrieb | Qoder-Eigenschaften dafür sind unbelegt (§4) |
 
 ## 3. Layout
@@ -116,12 +116,12 @@ trigger:
 required_evidence: [agreement, capacity, rule]
 allowed_actions:               # Allowlist: was fehlt, ist unmöglich
   - name: antwortentwurf-erzeugen
-    genehmigungspflicht: false
+    requires_approval: false
   - name: projektplan-aktualisieren
-    genehmigungspflicht: true
-    ziel: sandbox-systeme/projektplan
+    requires_approval: true
+    target: sandbox-systems/projektplan
   - name: nachforderung-formulieren
-    genehmigungspflicht: true
+    requires_approval: true
 checkpoints:
   - wunsch-und-zusage-getrennt
   - betroffene-arbeit-benannt
@@ -143,20 +143,20 @@ neu → gesichtet → entscheidung-nötig → freigegeben → ausgeführt → ab
    (Evidenz fehlt)                                          ↑ (Antwort trifft ein) → gesichtet
 ```
 
-`wartet-auf-eigentümer` ist der Zustand, an dem sich entscheidet, ob das Produkt dauerhaft ist oder ein
-Chat: Der Lauf endet, Tag und Wochen vergehen, und der Fall nimmt beim nächsten Start die Arbeit wieder
-auf, ohne dass der Betreiber sich erinnert.
+`wartet-auf-eigentümer` ist der Zustand, an dem sich entscheidet, ob hier ein dauerhafter Fallzustand
+entsteht oder nur ein Chat: Der Lauf endet, Tage oder Wochen vergehen, und der Fall nimmt beim nächsten
+Start die Arbeit wieder auf, ohne dass sich der Betreiber erinnern muss.
 
 ### 4.4 Aktion und Freigabe (`action`)
 
 ```yaml
-aktion: projektplan-aktualisieren
-fall: CHANGE-01
+action: projektplan-aktualisieren
+case: CHANGE-01
 payload_hash: sha256:…         # über die konkrete Nutzlast, nicht über die Aktionsart
-idempotenz_schlüssel: CHANGE-01-a3
-freigegeben_von: Manuel Spaeth
-freigegeben_am: 2026-09-19T14:02+02:00
-ausgeführt_am: null
+idempotency_key: CHANGE-01-a3
+approved_by: Manuel Spaeth
+approved_at: 2026-09-19T14:02+02:00
+executed_at: null
 ```
 
 Vier Zusagen, die die Sicherheitslinie aus `AGENTS.md` Regel 5 tragen:
@@ -174,7 +174,7 @@ Vier Zusagen, die die Sicherheitslinie aus `AGENTS.md` Regel 5 tragen:
 
 **Nordwind Betriebstechnik**, fiktiver inhabergeführter B2B-Dienstleister, acht Personen,
 Projektgeschäft mit zwei laufenden Kunden. Alle Namen, Beträge und Termine erfunden; keine Ableitung aus
-realen Delta-Weave-Kunden. Diese Datei ist die Referenz dafür, was als „echt" aussieht, ohne echt zu sein.
+realen Delta-Weave-Kunden. Das ist die Referenz dafür, was wie „echt" aussieht, ohne echt zu sein.
 
 ### 5.2 Vier Fälle, zwei Prozesse
 
@@ -210,7 +210,7 @@ gleicher Prompt-Rumpf, derselbe Fall, getrennte Läufe.
 
 | Größe | Erfassung |
 |---|---|
-| Eigentümer-Aufwand | Minuten für Kontexterklärung, Korrektur, Pflege — im Protokoll strichweise |
+| Eigentümer-Aufwand | Minuten für Kontexterklärung, Korrektur, Pflege — einzeln im Protokoll vermerkt |
 | Falldauer | Zeitstempel aus `events.jsonl`, nicht aus dem Gedächtnis |
 | Unbelegte Behauptungen | Zahl der Sätze ohne `context-record`-Verweis im Ergebnis |
 | Falsche oder doppelte Aktionen | Abgleich `freigaben.md` gegen Sandbox-Dateien |
@@ -239,10 +239,10 @@ warum M5 eine Freigabe braucht und nicht einfach angesetzt wird.
 
 1. Zugriff wird außerhalb des Modells erzwungen: Schema-Validierung, Freigabeprüfung beim Ausführen,
    Allowlist-Aktionen. Hooks und Prompt-Regeln sind Zusätze, keine Grenze.
-2. Kein Credentials in diesem Repo, keine `.env`-Datei, kein Token in einer JSON-Antwort.
+2. Keine Credentials in diesem Repo, keine `.env`-Datei, kein Token in einer JSON-Antwort.
 3. Kein geschriebenes Ziel außerhalb von `prototype/sandbox-systems/` bis ausdrücklicher Freigabe.
 4. Kein Push in den Delta-Weave-Hub aus diesem Repo; ein Hexis-Versuch läuft in einem eigenen Repo
-   (§10 Regel 6).
+   (`AGENTS.md` Regel 6).
 5. Vor jeder Veröffentlichung — auch für die Doku eines erfolgreichen Laufs — die Freigabeliste
    `D:\OneDrive\Delta Weave\company\oeffentlichkeit.md` gegenprüfen. Das Repo ist privat, das ist keine
    Veröffentlichung; ein Screenshot daraus wäre es.
@@ -256,7 +256,7 @@ die eigentliche Frage — welche echten Quellen gelesen werden dürften — blei
 
 Offen bleibt:
 
-1. **Zielsegment** (§11.2). Für den Prototyp nicht nötig; vor M5 braucht die Vergleichsfrage eines.
+1. **Zielsegment** (§11.2). Für den Prototyp nicht nötig; vor M5 braucht die Vergleichsfrage ein Segment.
 2. **Freigabe für echte Fälle** (§11.3). Welche Quellen gelesen werden dürfen, und wer das Ergebnis gegen
    die echte Vereinbarung prüft. Ohne diese Freigabe bleibt der Prototyp ein Nachweis an erfundenem
    Material — belastbar für die Architektur, nicht für die Markthypothese.
@@ -266,7 +266,7 @@ Offen bleibt:
    M5, nicht M2.
 6. **Bezahlter Pilot** (§11.7). Keine Grundlage vor M3.
 7. **Sprache der Kundendokumente** (§11.8). Intern Deutsch mit englischen Bezeichnern; für Kundendaten
-   brauchte es eine Entscheidung vor dem ersten echten Fall.
+   braucht es eine Entscheidung vor dem ersten echten Fall.
 8. **Hub-Rückkopplung.** `D:\OneDrive\Delta Weave\projects\company-harness.md` und `MAP.md` sind nach
    `AGENTS.md` nachzuziehen, sobald sich der Produktumfang ändert. Dieser Plan ändert ihn nicht, M3
    könnte es. Der Hub liegt außerhalb dieses Workspaces und war der Sitzung nicht zugänglich;
