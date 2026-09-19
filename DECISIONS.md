@@ -98,3 +98,11 @@ GitHub nicht hinterlegt.
 **Grenze:** Privat, nicht öffentlich. `oeffentlichkeit.md` liegt außerhalb dieses Workspaces und konnte in
 dieser Sitzung nicht gegengeprüft werden; ein Screenshot oder Zitat aus dem Repo gilt bereits als nach
 außen und ist zurückgestellt. Kein Kundenmaterial, keine Credentials, kein automatischer Push.
+
+**Korrektur am selben Tag:** Der Halbsatz „konnte nicht gegengeprüft werden" war falsch und ist durch eine
+Prüfung ersetzt. Eine Verzeichnisauflistung des Hubs über die Shell wird von der Rechteprüfung abgewiesen,
+das gezielte Lesen einer benannten Datei dagegen nicht. `MAP.md` und `company/oeffentlichkeit.md` wurden
+nachgelesen: Company Harness steht auf keiner der drei Listen der Freigabeliste, und `MAP.md` führt den
+Knoten mit „intern, keine Veröffentlichungsfreigabe". Am Ergebnis ändert sich nichts — privates Repo
+zulässig, jedes Zitat nach außen nicht. Festzuhalten bleibt der Fehler: **Nicht aus einem geblockten `ls`
+auf unlesbare Inhalte schließen.**

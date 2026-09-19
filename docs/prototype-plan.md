@@ -41,7 +41,7 @@ Netzwerkverbindungen zu Geschäftssystemen.
 |---|---|
 | Echte Mail-, Kalender-, Buchhaltungs- oder Kundenzugänge | `AGENTS.md` Regel 4; keine Freigabe vorhanden |
 | Oracle AI Database 26ai | `CONTEXT-SIGNOFF.md` §10 Schritt 6: erst wenn reale Daten- und Retrieval-Anforderungen es begründen |
-| Hexis-Bereitstellung | braucht freigegebene Container-Umgebung und Lizenzprüfung am Quelltext (§7) |
+| Hexis-Bereitstellung | braucht eine freigegebene Container-Umgebung; die Lizenzprüfung am Quelltext ist unabhängig davon sofort möglich (§9 Punkt 3) |
 | Mehrbenutzer, Mandantenfähigkeit, Rollenverwaltung | kein Nachweis vor dem ersten Prozessergebnis |
 | White-Label, Vertrieb, Preise | `product-plan.md`: keine validierten Preisbänder |
 | Unbeaufsichtigter Betrieb | Qoder-Eigenschaften dafür sind unbelegt (§4) |
@@ -154,7 +154,7 @@ action: projektplan-aktualisieren
 case: CHANGE-01
 payload_hash: sha256:…         # über die konkrete Nutzlast, nicht über die Aktionsart
 idempotency_key: CHANGE-01-a3
-approved_by: Manuel Spaeth
+approved_by: rolle:inhaber    # die Rolle freigeben lässt, nicht die Person, die tippt
 approved_at: 2026-09-19T14:02+02:00
 executed_at: null
 ```
@@ -175,6 +175,13 @@ Vier Zusagen, die die Sicherheitslinie aus `AGENTS.md` Regel 5 tragen:
 **Nordwind Betriebstechnik**, fiktiver inhabergeführter B2B-Dienstleister, acht Personen,
 Projektgeschäft mit zwei laufenden Kunden. Alle Namen, Beträge und Termine erfunden; keine Ableitung aus
 realen Delta-Weave-Kunden. Das ist die Referenz dafür, was wie „echt" aussieht, ohne echt zu sein.
+
+**Erfunden steht aber nicht nur hier, sondern in den Daten selbst.** Jeder Fallordner trägt eine
+`synthetisch`-Zeile, und jeder Kontextdatensatz erbt sie aus seinem Korpus. Der Grund ist ein Befund aus
+`oeffentlichkeit.md` zur MMC-Delta: Ein Erfundenes ist nur dann ungefährlich, wenn es *nachweislich*
+erfunden und *als erfunden gekennzeichnet* ist — sonst hängt die Einordnung an einer Datei, die beim
+Weitergeben eines einzelnen Ergebnisblatts nicht mitwandert. Ein gezeigtes Ergebnis aus `runs/` muss ohne
+diesen Plan verraten, dass es Kunst ist.
 
 ### 5.2 Vier Fälle, zwei Prozesse
 
@@ -220,6 +227,11 @@ Vergleichsmaßstab ist eine einfache Regel oder das bestehende Werkzeug, nicht d
 Zustand (`CONTEXT-SIGNOFF.md` §8). Der Maßstab ist vor dem ersten Lauf aufzuschreiben, sonst wird er
 rückwärts passend gemacht.
 
+Der Mechanismus dafür ist nicht neu zu erfinden: ATHA und FinanzMehrwert laufen beide mit einem
+Eval-Runner gegen einen harten Gate (Quelle: `D:\OneDrive\Delta Weave\MAP.md`, Stand 2026-09-16). M3 ist
+ein weiterer Satz Fälle an diesem Muster — was zugleich die Frage mitbeantwortet, ob sich das Muster über
+zwei Produktarchitekturen hinaus wiederverwenden lässt.
+
 ## 7. Meilensteine
 
 | # | Schritt | Fertig, wenn | Abbruch, wenn |
@@ -244,8 +256,14 @@ warum M5 eine Freigabe braucht und nicht einfach angesetzt wird.
 4. Kein Push in den Delta-Weave-Hub aus diesem Repo; ein Hexis-Versuch läuft in einem eigenen Repo
    (`AGENTS.md` Regel 6).
 5. Vor jeder Veröffentlichung — auch für die Doku eines erfolgreichen Laufs — die Freigabeliste
-   `D:\OneDrive\Delta Weave\company\oeffentlichkeit.md` gegenprüfen. Das Repo ist privat, das ist keine
-   Veröffentlichung; ein Screenshot daraus wäre es.
+   `D:\OneDrive\Delta Weave\company\oeffentlichkeit.md` gegenprüfen. **Gegenprüft 2026-09-19:** Company
+   Harness steht auf keiner der drei Listen der Datei und ist im Hub-Knoten als „intern, keine
+   Veröffentlichungsfreigabe" geführt. Das private Repo ist damit zulässig, ein Screenshot oder Zitat
+   daraus aber nicht — es wäre die erste Veröffentlichung dieses Bestands.
+6. Kein Name von der Never-List, und die Prüfung sitzt **an jeder Ableitungsstelle**, nicht nur im Prompt.
+   Der Bestand hat dafür einen Beleg, der leicht übersehen wird: Im ATHA-Korpus steckt eine gesperrte
+   Marke in *Dateinamen*, woraus passage ids, source display names und node-ids abgeleitet werden.
+   `id`, `source` und Dateinamen der Kontextdatensätze in §4.1 sind genau solche Ableitungen.
 
 ## 9. Offen
 
@@ -260,7 +278,10 @@ Offen bleibt:
 2. **Freigabe für echte Fälle** (§11.3). Welche Quellen gelesen werden dürfen, und wer das Ergebnis gegen
    die echte Vereinbarung prüft. Ohne diese Freigabe bleibt der Prototyp ein Nachweis an erfundenem
    Material — belastbar für die Architektur, nicht für die Markthypothese.
-3. **Hexis-Bereitstellung** (§11.4). M5 steht an, bis Docker-Weg und Lizenzprüfung geklärt sind.
+3. **Hexis-Bereitstellung** (§11.4). M5 steht an, bis der Docker-Weg geklärt ist. Die **Lizenzprüfung am
+   Quelltext ist sofort möglich** — sie war mit „`gh` fehlt" begründet, und die Begründung hält nicht
+   (HTTPS-Klonen funktioniert, siehe `DECISIONS.md` zum Repo-Eintrag). Ein Klon in ein separates,
+   isoliertes Repo genügt und braucht keine Container.
 4. **Oracle** (§11.5). Im Prototyp nicht vorgesehen; Begründung wäre ein realer Retrieval-Fall aus M3.
 5. **Qoder-Rechte** (§11.6). Unbelegt bleiben unbeaufsichtigte Integration und White-Label; das begrenzt
    M5, nicht M2.
@@ -269,8 +290,13 @@ Offen bleibt:
    braucht es eine Entscheidung vor dem ersten echten Fall.
 8. **Hub-Rückkopplung.** `D:\OneDrive\Delta Weave\projects\company-harness.md` und `MAP.md` sind nach
    `AGENTS.md` nachzuziehen, sobald sich der Produktumfang ändert. Dieser Plan ändert ihn nicht, M3
-   könnte es. Der Hub liegt außerhalb dieses Workspaces und war der Sitzung nicht zugänglich;
-   `oeffentlichkeit.md` konnte für das Repo ebenfalls nicht gegengeprüft werden — siehe §8 Punkt 5.
+   könnte es. **Gelesen am 2026-09-19** — `MAP.md` führt den Knoten mit „intern, keine
+   Veröffentlichungsfreigabe" in der Spalte *Link nach außen*. Die Spalte ist seit dem Push ungenau:
+   Es gibt jetzt ein privates Remote. Nachziehen tut der Knoten trotzdem erst, wenn er sich auf den
+   Produktumfang auswirkt; ein Schreibversuch außerhalb dieses Workspaces braucht Manules Wort.
+   *(Rechtschreibung des Nachnamens: `MAP.md` hält **Späth** als dokumentierte Schreibweise fest und
+   verwirft abweichende Chat-Schreibweisen bis zur Belegung. Git-Konfiguration und Commits hier tragen
+   eine andere. Nicht vom Agenten geändert.)*
 
 ## 10. Nächster Schritt
 
@@ -283,6 +309,11 @@ noch die Qoder-Sitzung.
 - [`CONTEXT-SIGNOFF.md`](CONTEXT-SIGNOFF.md) §3, §7, §8, §10, §11 — Stand 2026-09-19
 - [`product-plan.md`](product-plan.md), Abschnitte *Proposed architecture*, *The experiment that decides
   build versus reuse*, *Development plan* — Stand 2026-09-19
+- `D:\OneDrive\Delta Weave\MAP.md` — Projektknoten Company Harness („intern, keine
+  Veröffentlichungsfreigabe"), Eval-Runner-Muster bei ATHA und FinanzMehrwert, Schreibweise des Nachnamens;
+  Stand 2026-09-16
+- `D:\OneDrive\Delta Weave\company\oeffentlichkeit.md` — Freigabeliste, Regel an Ableitungsstellen,
+  Anforderung „nachweislich erfunden und als erfunden gekennzeichnet"; Stand 2026-09-17
 - Manuels drei Angaben im Chat am 2026-09-19: Baseline zuerst, beide Prozesse parallel, privates Repo.
   Das synthetische Fallmaterial ist daraus abgeleitet, nicht entschieden (§9 Punkt 2)
 - Lokale Prüfung dieser Sitzung, Stand 2026-09-19: `gh` nicht installiert; Git Credential Manager
