@@ -42,6 +42,14 @@ Stand 2026-09-19. Die dortigen Marktaussagen sind seine Einschätzung, keine bel
   vollständige Ersetzbarkeit, Wiederverwendbarkeit und der praktische Einstieg im vorhandenen Setup.
 - White-Label ist die langfristige Richtung; Dienstleistung soll in Produkt übergehen.
 
+Ebenfalls von Manuel, am 2026-09-19 als spätere Angabe in denselben drei Punkten — diese Überarbeitung
+ersetzt die Vorschläge aus §3, soweit sie kollidieren:
+
+- **Baseline zuerst, dann Engine.** Es wird nichts gebaut, bevor der Kontextnachweis in der
+  Qoder-/Datei-Arbeitsweise erbracht ist. Das ist Bestätigung zu §10 Schritt 1–4, keine Vorwegnahme.
+- **Beide Prüfprozesse parallel**, nicht nacheinander. Die Empfehlung „Änderung zuerst" aus §3 ist überholt.
+- **Privates GitHub-Repo**, von Manuel selbst angelegt; siehe §11 Punkt 9.
+
 ## 3. Vorschlag (Agent, 2026-09-19 — nicht bestätigt)
 
 Die folgenden Punkte sind Empfehlungen aus der Analyse. Sie gelten, solange Manuel sie nicht verwirft.
@@ -85,6 +93,10 @@ verantwortet. Das ist eine zu prüfende Segmentwahl, kein belegter Markt.
   nicht geprüft. Es liegt kein Test der geplanten Retrieval-Last vor.
 - **Hexis im Betrieb.** Installationsanforderungen wurden aus einem README-Spiegel gelesen, nicht
   ausgeführt. Quelltext und Lizenz wurden nicht direkt eingesehen (GitHub-CLI fehlte auf dem PATH).
+  **Nachtrag 2026-09-19:** Die Begründung ist überholt — `gh` fehlt weiterhin, aber HTTPS-Klonen und
+  -Pushen funktionieren über den systemweit konfigurierten Git Credential Manager. Eine Lizenzprüfung am
+  Quelltext ist also sofort möglich und liegt noch immer nicht vor. Siehe
+  [`DECISIONS.md`](DECISIONS.md), Vorgeschichte zum Repo-Eintrag.
 - **Alle Herstellerangaben.** Sie belegen, was dokumentiert oder beworben wird — nicht, dass es im
   Kundeneinsatz zuverlässig läuft. Kein Kandidat wurde gegen unsere Abnahmekriterien getestet.
 - **Vollständige Ersetzbarkeit.** Offen. Genau dafür ist der Vergleich in §8 vorgesehen.
@@ -113,6 +125,7 @@ verantwortet. Das ist eine zu prüfende Segmentwahl, kein belegter Markt.
 | [`CONTEXT-SIGNOFF.md`](CONTEXT-SIGNOFF.md) | Dieses Dokument; Einstieg für jede neue Session | Stand 2026-09-19 |
 | [`AGENTS.md`](AGENTS.md) | Arbeitsregeln für Agents in diesem Workspace | neu, 2026-09-19 |
 | [`docs/product-plan.md`](docs/product-plan.md) | Produktthese, Prozessbeispiele, Architektur, Wettbewerbs- und Ersetzbarkeitsvergleich, Marktansatz, Build-or-Reuse-Experiment — mit 16 Quellenbelegen | verschoben aus dem Delta-Weave-Hub, 2026-09-19 |
+| [`docs/prototype-plan.md`](docs/prototype-plan.md) | Umsetzungsplan des Prototyps: Leitfrage, Grenzen, vier Datenverträge, synthetisches Fallmaterial, Messprotokoll, Meilensteine M0–M5 mit Abbruchbedingungen | neu, 2026-09-19; aufbauend auf §10 dieses Dokuments |
 | [`docs/sources/konzept-ursprung-2026-09-19.md`](docs/sources/konzept-ursprung-2026-09-19.md) | Manuels ursprüngliche Konzeptfassung (Sicherung der Session-Anlage) | Kopie der Anlage, Quelltext unverändert |
 
 **Außerhalb dieses Workspaces, aber relevant:**
@@ -210,6 +223,10 @@ Bei knapper Zeit ist der Einrichtungsaufwand ein Verkaufseinwand, nicht nur unse
 
 Reihenfolge, nicht Termine. Jeder Schritt hat eine erkennbare Abbruchbedingung.
 
+**Stand 2026-09-19:** Diese Liste ist in [`docs/prototype-plan.md`](docs/prototype-plan.md) §7 zu
+Meilensteinen M0–M5 mit je einer Abbruch- und einer Fertig-Bedingung ausgearbeitet; Schritt 5 und 6 sind
+dort M5 und M4. Die Liste unten bleibt als ursprüngliche Fassung stehen.
+
 1. **Fallmaterial anlegen.** Zwei synthetische oder ausdrücklich freigegebene Fälle je Prozess:
    eingehende Änderung, vereinbarter Umfang, Kapazität, kaufmännische Regeln, erwartetes Ergebnis.
    *Fertig, wenn* ein Prüfer ohne Vorwissen sagen kann, ob das Ergebnis stimmt.
@@ -231,19 +248,27 @@ Reihenfolge, nicht Termine. Jeder Schritt hat eine erkennbare Abbruchbedingung.
 
 1. **Reihenfolge der zwei Prüfprozesse.** Änderung → Lieferplan zuerst, oder Rechnungsbereitschaft?
    Empfehlung im Vorschlag: Änderung zuerst, weil dort der Kontext die Entscheidung sichtbar verändert.
+   **Erledigt 2026-09-19:** Manuel lässt beide parallel laufen; die Empfehlung bleibt als Vorschlag stehen.
+   Siehe [`DECISIONS.md`](DECISIONS.md) und [`docs/prototype-plan.md`](docs/prototype-plan.md) §0.
 2. **Zielsegment.** Inhabergeführte B2B-Dienstleister mit Projektlieferung als Einstieg — bestätigen,
-   oder ein anderes Segment aus dem vorhandenen Umfeld wählen?
+   oder ein anderes Segment aus dem vorhandenen Umfeld wählen? Für den Prototyp nicht nötig; vor dem
+   Ersetzungskandidaten-Vergleich (M5) braucht die Frage eine Antwort.
 3. **Fallmaterial.** Synthetisch, oder ausdrücklich freigegebene echte Fälle? Welche Quellen dürfen
-   gelesen werden? Bisher keine Freigabe für Kunden- oder Mailzugänge.
+   gelesen werden? Bisher keine Freigabe für Kunden- oder Mailzugänge. **Vorläufig geklärt, nicht
+   entschieden:** der Prototyp nutzt synthetisches Material, weil Regel 4 keine andere Wahl lässt. Die
+   Frage, welche echten Quellen gelesen werden dürfen, bleibt offen.
 4. **Hexis-Bereitstellung.** Docker auf diesem Rechner einrichten, einen separaten Sandbox-Host nutzen,
    oder erst ohne Hexis arbeiten? Lizenzprüfung am Quelltext steht in jedem Fall aus.
-5. **Oracle.** Weiter als Kandidat führen oder zurückstellen, bis die Prozesse laufen?
+5. **Oracle.** Weiter als Kandidat führen oder zurückstellen, bis die Prozesse laufen? Im Prototyp nicht
+   vorgesehen; eine Begründung wäre ein realer Retrieval-Fall aus M3.
 6. **Qoder-Rechte.** Wer klärt gehosteten Betrieb und White-Label-Fähigkeit — Herstelleranfrage nötig?
 7. **Erster bezahlter Pilot.** Mit wem, und auf welcher Grundlage? Die vorhandenen Projektkontakte
-   stehen laut Hub ohne Vertrag und ohne Preis; Interesse ist keine Beauftragung.
+   stehen laut Hub ohne Vertrag und ohne Preis; Interesse ist keine Beauftragung. Keine Grundlage vor M3.
 8. **Sprache der Kundendokumente.** Deutsch, englisch, oder beides? Intern ist die Mischung bewusst.
 9. **Repo-Sichtbarkeit.** Git ist ohne Remote initialisiert. Wann und ob ein privates GitHub-Repo
-   folgt, ist offen.
+   folgt, ist offen. **Erledigt 2026-09-19:** privates Repo
+   `https://github.com/melkor42/Company-Harness`, von Manuel angelegt; Einzelheiten und der korrigierte
+   Befund zum GitHub-Zugang stehen in [`DECISIONS.md`](DECISIONS.md).
 
 ## 12. Wie dieser Stand zustande kam
 
