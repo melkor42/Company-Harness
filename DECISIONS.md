@@ -152,3 +152,49 @@ gegenlesen hat. M2 gegen einen unbestätigten Maßstab laufen zu lassen wäre ei
 **Anwendung:** Vor dem ersten A/B-Lauf ist `prototype/cases/*/erwartet.md` von einer Person ohne
 Sitzungsvorwissen gegenzulesen; das Ergebnis kommt in `prototype/evaluation/MESSPROTOKOLL.md` §2 und diese
 Zeile gilt als erledigt.
+
+## 2026-10-09 — Das Ziel dieser Phase heißt Evaluierung; Manifest und Gegenlese getrennt
+
+**Entscheidung (Manuel, Diktat 2026-10-09):** Das Ziel der laufenden Arbeit ist die **Evaluierung**, nicht
+das Produkt. Seine Haltung dazu steht in [`docs/manifest.md`](docs/manifest.md) und gilt als bestätigte
+Position — neben §2 des Sign-offs, nicht darunter.
+
+**Entscheidung (Agent, 2026-10-09):** Die Gegenlese liegt als eigene Datei
+[`docs/manifest-gegenlese.md`](docs/manifest-gegenlese.md), nicht als Abschnitt im Manifest.
+
+**Grund:** Standpunkt und Kritik aus einer Datei lassen sich später nicht mehr trennen; dann ist nicht mehr
+erkennbar, was Manuel gesagt hat und was ein Agent eingewandt hat. Dieselbe Trennung, die der Sign-off
+zwischen *Bestätigt* und *Vorschlag* zieht.
+
+**Anwendung:** Die fünf Planänderungen aus der Gegenlese §5 (Rückfragen zweigeteilt zählen; Bedingung C mit
+Minimalkontext; Rückführungsregel für Ergebnisdokumente; Fallansicht in M2; Kontextbeschaffung als
+Prüfpunkt) sind **Vorschläge**. Was Manuel davon annimmt, wird hier als eigener Eintrag festgehalten und
+dann in Messprotokoll und Prototyp-Plan nachgezogen — nicht vorher.
+
+## 2026-10-10 — Gegenlese angenommen; Recherche zur Kontext-Verwaltung angesetzt
+
+**Entscheidung (Manuel, 2026-10-10):** Er stimmt der Gegenlese in
+[`docs/manifest-gegenlese.md`](docs/manifest-gegenlese.md) überein — „absolut der gleichen Meinung". Damit
+gelten die fünf Planänderungen aus deren §5 als **angenommene Richtung** (Rückfragen zweigeteilt zählen;
+Bedingung C mit Minimalkontext; Rückführungsregel; Fallansicht in M2; Kontextbeschaffung als Prüfpunkt).
+Der Nachzug in Messprotokoll und Prototyp-Plan steht noch aus und ist eigener Arbeitsschritt.
+
+**Zusatz (Manuel, 2026-10-10):** Die große Arbeit liegt im Verwalten des Kontexts. Er verwaltet seinen
+eigenen Agenten-Kontext lokal als kleine Markdown-Dateien, die der Agent findet und benutzt; eine Lösung
+muss an den Kontext der bestehenden Umgebung angepasst werden. Dazu ist eine Recherche angesetzt:
+Best Practices für dateibasierte kuratierte Kontext-Setups gegenüber RAG-Systemen, Grenzen von RAG-only,
+wann Retrieval nötig wird. Ergebnis wird in `docs/recherche-kontext-verwaltung.md` erwartet.
+
+## 2026-10-11 — Ziel neu gefasst: Brauchbarkeit über Unternehmen hinweg; Messbetrieb zurückgestellt
+
+**Entscheidung (Manuel, 2026-10-11):** Das Ziel ist neu gefasst: herausfinden, **was relevant ist, um einen
+Harness für unterschiedliche Unternehmen nützlich und hilfreich zu machen**. Der große Hebel ist die
+**Kontext-Kuration** — an ihr hängt, ob Ergebnisse effizient erzielt werden. Die bisherige Prototyp-Arbeit
+(Testläufe, synthetische Firmendaten, M0/M1-Messapparat) hatte nach seiner Einschätzung kein echtes, von
+ihm vorgegebenes Ziel und stört die Konzeptdiskussion eher, als dass sie sie trägt. Er erwägt die Löschung;
+die Entscheidung darüber steht aus.
+
+**Anwendung:** Die acht Fragen der laufenden M2-Runde sind hinfällig und werden nicht beantwortet. Die
+Arbeit läuft auf der Konzeptebene weiter; Grundlage bleiben Manifest, Gegenlese und die
+Kontext-Recherche. Der Umgang mit dem Prototyp-Bestand (löschen, einfrieren, teilweise übernehmen) wird
+als eigene Entscheidung geklärt und hier festgehalten.

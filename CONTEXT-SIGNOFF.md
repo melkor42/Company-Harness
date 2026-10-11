@@ -135,6 +135,10 @@ verantwortet. Das ist eine zu prüfende Segmentwahl, kein belegter Markt.
 | [`prototype/sandbox-systems/`](prototype/sandbox-systems/) | Vier Schreibziele statt echter Anschlüsse: Projektplan, Zeiterfassung, Rechnungsentwurf, Postausgang | gebaut 2026-09-19; die einzigen erlaubten Schreibziele |
 | [`prototype/tools/validate.mjs`](prototype/tools/validate.mjs) | Der Validator: Quelle muss existieren, scope muss passen, Erfundenes muss als erfunden stehen, Allowlist gilt | gebaut 2026-09-19/20, jede Prüfung einzeln mit Negativbeleg |
 | [`prototype/evaluation/MESSPROTOKOLL.md`](prototype/evaluation/MESSPROTOKOLL.md) | A/B-Bedingungen, Bestehensregel, Vergleichsmaßstab, Erfassungsfelder — **vor dem ersten Lauf** aufgeschrieben | Stand 2026-09-20; noch kein Lauf, keine Zahl eingetragen |
+| [`docs/manifest.md`](docs/manifest.md) | Manuels Position in neun Abschnitten: Ziel ist die Evaluierung; Presets statt Harness; Domänenwissen als Kern; Kontext kuratieren; drei Arbeitsweisen; Core Loop; deterministisch/urteilend getrennt; Oberfläche als Prüfmittel | aus Diktat 2026-10-09; **bestätigte Position**, kein Agentenvorschlag |
+| [`docs/manifest-gegenlese.md`](docs/manifest-gegenlese.md) | Einwände eines Agenten mit Web-Recherche: vier Punkte belegt, drei Widersprüche, vier blinde Flecken, fünf Planänderungen vorgeschlagen | Agent, 2026-10-09; von Manuel **angenommen** 2026-10-10 (DECISIONS.md), Nachzug in die Pläne steht aus |
+| [`docs/manifest.html`](docs/manifest.html) | Beide Teile als eigenständige HTML-Seite, ohne externe Abhängigkeiten | erzeugt 2026-10-10; bei Abweichung gelten die Markdown-Dateien |
+| [`docs/recherche-kontext-verwaltung.md`](docs/recherche-kontext-verwaltung.md) | Recherche gegen Primärquellen: dateibasierte kuratierte Kontext-Setups vs. RAG — Minimum, das funktioniert; gemessene Grenzen beider Extreme; wann Retrieval nötig wird; Nachvollziehbarkeit | Agent, 2026-10-10; 19 Quellen mit Datum, Herstellerangaben gekennzeichnet; Schwellwerte Datei→RAG bleiben OFFEN |
 
 **Außerhalb dieses Workspaces, aber relevant:**
 
