@@ -1,5 +1,15 @@
 # Context Sign-Off — Company Harness
 
+**Stand 2026-10-11 — Richtungsänderung, dieser Hinweis geht allem vor.** Das Produkt ist nicht mehr der
+Messprüfstand, sondern ein **Skill**: ein geführtes Setup, das eine Person an die Hand nimmt, die zum
+ersten Mal einen Harness benutzt — Erklärung, was ein Harness ist, dann Aufbau des Grundkontexts.
+Entscheidung und Begründung stehen in [`DECISIONS.md`](DECISIONS.md), Einträge vom 2026-10-11. Der
+Prüfstand (`prototype/`, `schema/`, `docs/prototype-plan.md`) ist an diesem Tag gelöscht; der letzte Stand
+liegt in der Git-Historie (Commit `d14365a` und davor). Die Abschnitte 1, 3, 7, 8, 10 und 11 beschreiben
+den ersetzten Weg und bleiben als Vorgeschichte stehen; §2 (soweit nicht kollidierend), §4, §5, §6 und §9
+gelten weiter. Dieses Dokument wird zu gegebener Zeit als Projektseite des Skills neu geschrieben — bis
+dahin gilt zuerst dieser Hinweis.
+
 **Stand 2026-09-19.** Neue Sessions starten hier, nicht bei null. Dieses Dokument übergibt den Stand
 der Produktidee **Company Harness Product Idea** an den Workspace
 `C:\Users\Admin\Documents\Company-Harness`, in dem die initiale Umsetzung beginnt.
@@ -125,20 +135,16 @@ verantwortet. Das ist eine zu prüfende Segmentwahl, kein belegter Markt.
 | [`CONTEXT-SIGNOFF.md`](CONTEXT-SIGNOFF.md) | Dieses Dokument; Einstieg für jede neue Session | Stand 2026-09-19 |
 | [`AGENTS.md`](AGENTS.md) | Arbeitsregeln für Agents in diesem Workspace | neu, 2026-09-19 |
 | [`docs/product-plan.md`](docs/product-plan.md) | Produktthese, Prozessbeispiele, Architektur, Wettbewerbs- und Ersetzbarkeitsvergleich, Marktansatz, Build-or-Reuse-Experiment — mit 16 Quellenbelegen | verschoben aus dem Delta-Weave-Hub, 2026-09-19 |
-| [`docs/prototype-plan.md`](docs/prototype-plan.md) | Umsetzungsplan des Prototyps: Leitfrage, Grenzen, vier Datenverträge, synthetisches Fallmaterial, Messprotokoll, Meilensteine M0–M5 mit Abbruchbedingungen | neu, 2026-09-19; aufbauend auf §10 dieses Dokuments. **M0 und M1 gebaut, Stand 2026-09-20** — Beschreibungen folgen den Dateien |
 | [`docs/sources/konzept-ursprung-2026-09-19.md`](docs/sources/konzept-ursprung-2026-09-19.md) | Manuels ursprüngliche Konzeptfassung (Sicherung der Session-Anlage) | Kopie der Anlage, Quelltext unverändert |
-| [`schema/`](schema/) | Fünf JSON-Schemas: Kontextdatensatz, Prozessdefinition, Fall, Fallzustand, Aktion | gebaut 2026-09-19/20; Verträge sind hier verbindlich, nicht im Fließtext |
-| [`prototype/KORPUS.md`](prototype/KORPUS.md) | Die erfundene Firma Nordwind Betriebstechnik: Rollen, zwei Kunden, Zahlensatzung, Kennzeichnung als Kunst | gebaut 2026-09-19; durchgehend synthetisch, `synthetisch: true` in jedem Datensatz |
-| [`prototype/context/`](prototype/context/) | Sechs erfundene Quelldokumente und zwanzig daraus extrahierte Kontextdatensätze | gebaut 2026-09-19/20, validiert |
-| [`prototype/processes/`](prototype/processes/) | Die zwei Prüfprozesse als versionierte Definitionen mit Allowlist | gebaut 2026-09-19, validiert |
-| [`prototype/cases/`](prototype/cases/) | Vier Fälle: Eingang, Fallakte und **vor dem Lauf geschriebenes** erwartetes Ergebnis | gebaut 2026-09-19/20; gegenzulesen von jemand ohne Vorwissen (§2 des Messprotokolls) |
-| [`prototype/sandbox-systems/`](prototype/sandbox-systems/) | Vier Schreibziele statt echter Anschlüsse: Projektplan, Zeiterfassung, Rechnungsentwurf, Postausgang | gebaut 2026-09-19; die einzigen erlaubten Schreibziele |
-| [`prototype/tools/validate.mjs`](prototype/tools/validate.mjs) | Der Validator: Quelle muss existieren, scope muss passen, Erfundenes muss als erfunden stehen, Allowlist gilt | gebaut 2026-09-19/20, jede Prüfung einzeln mit Negativbeleg |
-| [`prototype/evaluation/MESSPROTOKOLL.md`](prototype/evaluation/MESSPROTOKOLL.md) | A/B-Bedingungen, Bestehensregel, Vergleichsmaßstab, Erfassungsfelder — **vor dem ersten Lauf** aufgeschrieben | Stand 2026-09-20; noch kein Lauf, keine Zahl eingetragen |
 | [`docs/manifest.md`](docs/manifest.md) | Manuels Position in neun Abschnitten: Ziel ist die Evaluierung; Presets statt Harness; Domänenwissen als Kern; Kontext kuratieren; drei Arbeitsweisen; Core Loop; deterministisch/urteilend getrennt; Oberfläche als Prüfmittel | aus Diktat 2026-10-09; **bestätigte Position**, kein Agentenvorschlag |
-| [`docs/manifest-gegenlese.md`](docs/manifest-gegenlese.md) | Einwände eines Agenten mit Web-Recherche: vier Punkte belegt, drei Widersprüche, vier blinde Flecken, fünf Planänderungen vorgeschlagen | Agent, 2026-10-09; von Manuel **angenommen** 2026-10-10 (DECISIONS.md), Nachzug in die Pläne steht aus |
+| [`docs/manifest-gegenlese.md`](docs/manifest-gegenlese.md) | Einwände eines Agenten mit Web-Recherche: vier Punkte belegt, drei Widersprüche, vier blinde Flecken, fünf Planänderungen vorgeschlagen | Agent, 2026-10-09; von Manuel **angenommen** 2026-10-10 (DECISIONS.md); die Pläne, in die nachgezogen worden wäre, sind 2026-10-11 ersetzt |
 | [`docs/manifest.html`](docs/manifest.html) | Beide Teile als eigenständige HTML-Seite, ohne externe Abhängigkeiten | erzeugt 2026-10-10; bei Abweichung gelten die Markdown-Dateien |
 | [`docs/recherche-kontext-verwaltung.md`](docs/recherche-kontext-verwaltung.md) | Recherche gegen Primärquellen: dateibasierte kuratierte Kontext-Setups vs. RAG — Minimum, das funktioniert; gemessene Grenzen beider Extreme; wann Retrieval nötig wird; Nachvollziehbarkeit | Agent, 2026-10-10; 19 Quellen mit Datum, Herstellerangaben gekennzeichnet; Schwellwerte Datei→RAG bleiben OFFEN |
+
+**Gelöscht am 2026-10-11** (Richtungsänderung zum Skill, siehe Banner oben; letzter Stand in der
+Git-Historie, Commit `d14365a` und davor): `docs/prototype-plan.md`, `schema/` (fünf JSON-Schemas),
+`prototype/` (Korpus Nordwind, Kontextdatensätze, Prozessdefinitionen, vier Fälle, Sandbox-Systeme,
+Validator, Messprotokoll).
 
 **Außerhalb dieses Workspaces, aber relevant:**
 
@@ -232,6 +238,9 @@ Ergebnisse, laufende Pflege bei sich ändernden Quellen — und die Stunden des 
 Bei knapper Zeit ist der Einrichtungsaufwand ein Verkaufseinwand, nicht nur unsere Kosten.
 
 ## 10. Nächste Schritte für die initiale Umsetzung
+
+**Stand 2026-10-11: ersetzt** durch die Skill-Richtung ([`DECISIONS.md`](DECISIONS.md)); der Messprüfstand
+und seine Dateien sind gelöscht. Die Liste unten bleibt als ursprüngliche Fassung der Vorgeschichte stehen.
 
 Reihenfolge, nicht Termine. Jeder Schritt hat eine erkennbare Abbruchbedingung.
 

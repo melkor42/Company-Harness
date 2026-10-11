@@ -198,3 +198,25 @@ die Entscheidung darüber steht aus.
 Arbeit läuft auf der Konzeptebene weiter; Grundlage bleiben Manifest, Gegenlese und die
 Kontext-Recherche. Der Umgang mit dem Prototyp-Bestand (löschen, einfrieren, teilweise übernehmen) wird
 als eigene Entscheidung geklärt und hier festgehalten.
+
+## 2026-10-11 — Company Harness wird ein Skill: geführter Einstieg statt Messprüfstand
+
+**Entscheidung (Manuel, 2026-10-11):** Das Produkt wird ein **Skill**: ein geführtes Setup, das eine Person
+an die Hand nimmt, die zum ersten Mal einen Harness benutzt — der Skill soll der erste Aufruf beim Einstieg
+sein können. Inhalt zwei Seiten: erstens Erklärung, was ein Harness ist und wie diese Systeme funktionieren
+(sein eigener Einstieg war schwer, weil „Harness" ein Konzept ist und nirgends lag, was wie wo funktioniert);
+zweitens und wichtiger: **Grundkontext abfragen und aufbauen** — Personenprofil (USER.md, Muster ist sein
+delta-profile-Skill), AGENTS.md (was soll der Agent erfüllen), Workspace-Vision und Herausforderungen,
+Dateistruktur (agent-first abgelegt, privater Bereich getrennt, über Geräte teilbar), Regeln mit
+Verfallsdisziplin (veraltete Regeln richten mehr Schaden an als sie nutzen), Memory-System (wo die Dateien
+liegen, wie sie funktionieren, was dort abgelegt wird — harness-abhängig, muss dem Nutzer erklärt werden).
+Inhaltsquelle: seine eigenen Monate Agentenarbeit und sein bestehendes Setup. Zielgruppe: Anwender aus der
+Chatfenster-Welt, denen „Harness" ein Fremdwort ist; der Einstieg muss nicht schwierig sein, und der Harness
+soll proaktiv unterstützen, ohne dass man fragen muss. Soul-Files hält er für unbewiesen — allenfalls als
+optionaler, skeptisch kommentierter Baustein.
+
+**Repo-Bestand:** Die bestehenden Artefakte sollen weg (seine Worte: „besitzen keinen Wert"; Sicherung ist
+die Git-Historie). Der Umfang der Löschung wird vor Ausführung bestätigt.
+
+**Anwendung:** Der Messprüfstand (M0–M5, A/B-Pläne) ist ersetzt; die Einträge davor bleiben als Vorgeschichte
+stehen. Nächste Schritte: Inventur seines Setups, dann Aufbau des Skills mit dem skill-creator.

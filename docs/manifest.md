@@ -115,6 +115,6 @@ Drittens ist die **Oberfläche Prüfmittel, nicht Ausbaustufe**. Wenn der Mensch
 Ansicht sieht, ob der Fall stimmt, dann gehört eine solche Ansicht — und sei es die einfachste denkbare —
 in die Evaluierung, nicht erst in ein späteres Produkt.
 
-Alles Weitere — Markt, Ersetzbarkeit, Kandidaten, Meilensteine — steht in
-[`product-plan.md`](product-plan.md) und [`prototype-plan.md`](prototype-plan.md) und wird von diesem
-Manifest nicht wiederholt.
+Alles Weitere — Markt, Ersetzbarkeit, Kandidaten — steht in [`product-plan.md`](product-plan.md) und wird
+von diesem Manifest nicht wiederholt. (Der Prototyp-Plan, auf den dieser Abschnitt ursprünglich verwies,
+ist am 2026-10-11 ersetzt worden; siehe `../DECISIONS.md`.)
