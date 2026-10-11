@@ -220,3 +220,16 @@ die Git-Historie). Der Umfang der Löschung wird vor Ausführung bestätigt.
 
 **Anwendung:** Der Messprüfstand (M0–M5, A/B-Pläne) ist ersetzt; die Einträge davor bleiben als Vorgeschichte
 stehen. Nächste Schritte: Inventur seines Setups, dann Aufbau des Skills mit dem skill-creator.
+
+## 2026-10-11 — Skill-Parameter: neutraler Kern mit Qoder-Anhang, Name „company-harness"
+
+**Entscheidung (Manuel, 2026-10-11):** Der Skill wird **harness-neutral im Kern** aufgebaut — Grundkontext,
+Regeln, Memory, Dateistruktur werden herstellerübergreifend erklärt — mit einem **Qoder-Anhang** als
+erstem konkreten Anhang (echte Pfade, settings.json, Besonderheiten). Weitere Harness-Anhänge (Claude
+Code, Cursor) kommen später. Begründung: Viele Erklärungen sind harness-abhängig und müssen dem Nutzer
+als solche erkennbar sein; reine Neutralität würde den Einstieg wieder schwer machen.
+
+**Name:** `company-harness` (Produktname, Aufruf `/company-harness`).
+
+**Anwendung:** Referenzdateien des Skills trennen neutrale Konzepte von Anhängen je Harness; jede
+herstellerspezifische Angabe steht in einem Anhang, nie im Kern.
