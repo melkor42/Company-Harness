@@ -12,6 +12,9 @@ bestätigt oder korrigiert.
 - **Vorschlagen statt abfragen.** Nach jeder Antwort den fertigen Dateiabschnitt zeigen:
   „Ich würde das so festhalten: … — passt das?" Der Nutzer redigiert lieber, als dass er
   formuliert.
+- **Zweckansage vor jeder Frage.** Vor dem Stellen sagen, welche Verhaltensänderung des
+  Agenten die Antwort bewirkt. Antworten sind nur so gut wie das Verständnis dessen, was
+  sie bewirken — ohne Zweck sind selbst gute Fragen Ratespiele.
 - **Antworten wiederverwenden.** Was in Block 1 gesagt wurde, in späteren Blöcken nicht
   erneut fragen; höchstens bestätigen lassen.
 - **Leere lassen dürfen.** Wenn der Nutzer etwas nicht weiß, den Abschnitt mit einem Satz
@@ -32,13 +35,27 @@ Klären, bevor etwas geschrieben wird:
 
 ## Block 1 — Die Person → `USER.md`
 
-Fragen: Wie arbeitest du am liebsten? Worauf legst du Wert, wenn dir jemand (Mensch oder
-Maschine) Arbeit abnimmt? Was hat dich an bisherigen KI-Antworten geärgert?
+Prüfstein für jede Frage dieses Blocks: Ändert sich je nach Antwort ein benennbares
+Verhalten des Agenten? Wenn nein, fliegt die Frage raus. Zwei Fragen bestehen den
+Prüfstein (Zweckansagen nicht vergessen):
 
-Aus den Antworten die vier Abschnitte der Vorlage `assets/vorlagen/USER.md` füllen. Typische
-Muster: Entscheidungen selbst treffen vs. delegieren; Zahlen selbst prüfen vs. prüfen lassen;
-kurz und direkt vs. ausführlich erklärt. Die Antwort „geärgert" ist die ergiebigste — daraus
-werden die Punkte unter „Was ich nicht will".
+1. „Was hat dich an bisherigen KI-Antworten geärgert?" — *Zweck: Daraus werden die
+   Punkte unter „Was ich nicht will" — Abbruchkriterien, die jede Antwort des Agenten
+   betreffen.* Die ergiebigste Frage des Blocks.
+2. „Woran erkennst du, dass erledigte Arbeit gut ist?" — *Zweck: Daraus wird der
+   Maßstab, an dem der Agent eigene Arbeit prüft, bevor er sie vorlegt.*
+
+**Autonomie wird nicht gefragt, sondern voreingestellt.** Ob jemand delegiert, hängt am
+Vertrauen, und Vertrauen wächst durch Gebrauch — nicht durch eine Interviewantwort. Der
+Startzustand ist deshalb für alle gleich: *eng führen* — der Agent legt Entwürfe vor und
+fragt vor Handlungen. Den Lockerungsmechanismus in zwei Sätzen erklären: „Wenn der Agent
+etwas wiederholt gut macht, sag einmal: Das darfst du künftig ohne Rückfrage. Genau das
+wird dann als Regel festgehalten." Lockerungen wandern als datierte Regeln in die
+`AGENTS.md` (Block 3). Eine Frage nach Delegieren vs. Selbst-Entscheiden ist nutzlos:
+Sie fragt eine stabile Präferenz ab, die ein Neueinsteiger noch gar nicht haben kann.
+
+Aus den Antworten und aus Block 0 die vier Abschnitte der Vorlage
+`assets/vorlagen/USER.md` füllen — was dort schon gesagt wurde, nicht erneut fragen.
 
 ## Block 2 — Arbeit und Ziel → `VISION.md`
 
@@ -49,6 +66,11 @@ Vorlage: `assets/vorlagen/VISION.md`. Den Abschnitt „Aktuelle Herausforderunge
 heutigen Datum versehen — er veraltet am schnellsten (siehe `regeln-und-verfall.md`).
 
 ## Block 3 — Regeln → `AGENTS.md`
+
+Die erste harte Regel steht vor der ersten Frage fest: die Voreinstellung aus Block 1
+(*eng führen* — Entwürfe vorlegen, vor Handlungen fragen). Sie kommt mit dem
+Einrichtungsdatum in die Datei; jede spätere Lockerung wird als eigene datierte Regel
+darunter angehängt.
 
 Fragen: Was soll der Agent **nie** tun? (Typisch: nichts löschen ohne Rückfrage, nichts
 veröffentlichen, keine fremden Konten anfassen.) Was soll er **immer** tun? (Typisch:
