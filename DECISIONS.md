@@ -233,3 +233,54 @@ als solche erkennbar sein; reine Neutralität würde den Einstieg wieder schwer 
 
 **Anwendung:** Referenzdateien des Skills trennen neutrale Konzepte von Anhängen je Harness; jede
 herstellerspezifische Angabe steht in einem Anhang, nie im Kern.
+
+## 2026-10-12 — Probelauf des v1-Skills: zwei Konstruktionsfehler, sofortige Korrektur
+
+**Befund (Manuel als Testnutzer, 2026-10-12):** Der v1-Skill lief als Probelauf in diesem Workspace.
+Zwei Fehler: erstens waren die Block-1-Fragen flach — ohne Zweckansage kann der Nutzer nicht wissen,
+was seine Antwort bewirkt; zweitens fragte die Delegier-Frage („selbst entscheiden oder delegieren?")
+eine stabile Präferenz ab, die ein Neueinsteiger gar nicht haben kann — ob jemand delegiert, hängt am
+Vertrauen, und Vertrauen wächst durch Gebrauch, nicht durch Interviewantwort.
+
+**Korrektur (mit Manuels Freigabe, 2026-10-12):** Delegier-Frage gestrichen; Autonomie wird
+voreingestellt (*eng führen*, Lockerungen als datierte Regeln — „Vertrauensrampe"); Zweckansage und
+Prüfstein („ändert die Antwort ein benennbares Agentenverhalten?") als Gesprächsregeln; Block 3 beginnt
+die AGENTS.md mit der datierten Startregel. Eingebaut in
+`.qoder/skills/company-harness/references/interview-leitfaden.md` und in den v2-Leitfaden übernommen.
+
+## 2026-10-12 — Fünf Linsen synthetisiert; neuer Skill harness-mentor (v2) angenommen
+
+**Entscheidung (Manuel, 2026-10-12):** Der Plan aus der Synthese der fünf parallelen
+Modell-Explorationsläufe vom selben Tag ist angenommen; v2 entsteht als neuer Skill
+`.qoder/skills/harness-mentor/`. Architektur: zwei Modi (**Einrichten**/**Begleiten**), entschieden an
+`BEGLEITSTAND.md`; Dreiteilung **Einladung** (≤3 Zeilen immer geladen, mit Ausschalter) / **Programm**
+(der Skill) / **Stand** (BEGLEITSTAND.md); Didaktik-Kern aus drei Grundbildern (fremde Arbeitskraft mit
+begrenztem Gedächtnis, Kontext als einzige Hebelstelle, Vertrauen als Korrigierbarkeit); Anstoß-Disziplin
+(Schweigen-Standard, fünf Reibungsspuren ab zweitem Vorkommen, vier zulässige Anstöße, max. eine Regung
+pro Sitzung); Auszug in Stufen mit Abnahmeprüfung; Ehrlichkeits-Regeln (Fähigkeiten nur aus der echten
+Werkzeugliste, Ladeprüfung) und Gedächtnis-Hygiene (Dreiteilung, Umkehrbedingung, Fundortpflicht).
+
+**Grund:** Die fünf Läufe konvergieren unabhängig auf dieselben Mechanismen (Vertrauen operationalisiert
+als Prüf-/Vorhersag-/Korrigierbarkeit; Begleitstand als Persistenzmuster; Mentor mit eigenem Ende).
+Stärkstes Validierungssignal: Zweckansage/Prüfstein (Probelauf) und ccaabs „doppelte Ertrag-Regel" sind
+unabhängig dieselbe Regel. Quelle: die fünf Qoder-Sessions vom 2026-10-12, Destillation durch vier
+parallele Agenten, Synthese in dieser Session.
+
+**Anwendung:** v1 (`company-harness`) bleibt als Artefakt erhalten; v2 führt die Linie weiter.
+Entwicklungsmethode: echte Probeläufe mit Personas (Chat-Neueinsteiger, erfahrene Entwicklerin,
+stale-memory-Frust) statt geschriebener Beispieldialoge; Befunde werden wie am 2026-10-12 eingebaut.
+Offen: Distribution/Auffindbarkeit (v2 bleibt manueller Aufruf); die Gabel aus Lauf fa76, ob der
+erklärende Teil dauerhaft zum Produkt gehört — vorerst ja, als Didaktik-Kern.
+
+## 2026-10-12 — Zielgruppe universell; Einordnung wird Teil des Kennenlernens
+
+**Entscheidung (Manuel, 2026-10-12):** Der Skill hilft nicht nur der Chat-Welt, sondern jedem, der mit
+einem Harness arbeiten will — Vorbild grill-me von Matt Pocock: für Entwickler gedacht, hilft bei
+besseren Entscheidungen aber jedem. Entwickler werden definitiv abgefangen; Early Adopter sind
+neugierige, selbstmotivierte Unternehmer breiten Spektrums. Die Einordnung (Arbeitskontext, Ziele) ist
+Teil von Block 0 des Einrichtens: Sie wählt Beispiele und Tempo (Passung), steckt aber niemanden in eine
+Schublade.
+
+**Zusatz (Manuel, 2026-10-12):** Der Planungsmodus und die Intention des Planens im Vergleich zum Chat
+war selbst eine Lernhürde — aufgenommen als Lernelement „Harness-Modi" in
+`.qoder/skills/harness-mentor/references/didaktik.md`.

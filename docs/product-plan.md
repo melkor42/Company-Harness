@@ -17,6 +17,44 @@ temporary). Its product claims are hypotheses, not independently verified findin
 The recommendations below are agent proposals from this analysis, Stand 2026-09-19.
 This is internal planning, not a publication approval or a delivery commitment.
 
+## 2026-10-12 — Current direction: harness-mentor (v2)
+
+**Status: direction accepted by Manuel on 2026-10-12; the sections below describe the 2026-09-19
+company-work-layer analysis and are kept as background.** The pivot from measurement rig to skill is
+recorded in [`../DECISIONS.md`](../DECISIONS.md) (2026-10-11); this section supersedes the product
+thesis for the current phase.
+
+**Sources:** five parallel model exploration runs of 2026-10-12 (Qoder sessions in this workspace,
+distilled by four parallel agents) plus a live test run of the v1 skill the same day. Two findings
+were fixed immediately (flat interview questions; the delegation question — autonomy is now a
+prescribed trust ramp, not a preference interview).
+
+**Synthesis — what all five lenses converged on:**
+
+- Trust is operationalisable: predictability, checkability, correctability — with the first working
+  correction as the critical trust moment.
+- Architecture in three parts: **invitation** (≤3 always-loaded lines, with off-switch), **program**
+  (the skill), **state** (`BEGLEITSTAND.md`).
+- The mentor's default is silence: proactivity only on observable friction signals (threshold: two
+  occurrences), at most one intervention per session.
+- Experience before artefacts: three mental images (foreign worker with limited memory; context as
+  the only lever — say, offer, allow; trust as correctability) come before any template.
+- Question discipline: every question states its purpose and must change observable agent behaviour.
+- Honesty boundaries: capabilities only from the live tool list; "assumed, not verified" is named;
+  a file that is not loaded is not context.
+- The mentor has an ending: staged retreat (eng geführt → begleitend → auf Abruf → aus), transitions
+  on evidence, acceptance test of three experiences plus a retention check after 2–3 weeks.
+
+**Product:** new skill `.qoder/skills/harness-mentor/` with two modes — *Einrichten* (guided setup,
+evolved from v1) and *Begleiten* (quiet companion across sessions). v1 (`company-harness`) remains
+as an artefact. Target audience is universal, not chat-world only: audience placement happens in the
+intake and selects examples and pace (fit, not pigeonholing); developers and curious owner-led
+early adopters alike. Development method: real test runs with personas rather than scripted dialogues;
+findings feed the skill, as on 2026-10-12.
+
+**Open:** distribution/discoverability (v2 stays manually invoked); whether the explanatory part
+permanently belongs to the product (lens fa76's fork — for now yes, as the didactics core).
+
 ## Product thesis
 
 **A company-owned AI work layer that carries tasks from relevant company context to reviewed outcomes,
