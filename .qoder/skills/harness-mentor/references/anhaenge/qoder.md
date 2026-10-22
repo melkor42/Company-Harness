@@ -36,15 +36,15 @@ wird diese Datei wie eine Abhängigkeit: datiert, und nur mit Geprüftem.*
 - Praxis: Typ-Präfix im Dateinamen (`user-…`, `feedback-…`, `reference-…`),
   Verknüpfungen als `[[datei-name]]`, relative Daten immer absolut schreiben.
 
-## Die Einladung bei Qoder verankern
+## Die Begleitung bei Qoder fortsetzen
 
-- **Regeldatei:** die Zeilen aus `assets/vorlagen/einladung.md` in die AGENTS.md des
-  Workspaces (immer geladen). Trägt, solange die Datei selbst geladen wird —
-  Ladeprüfung zeigen (siehe `../ehrlichkeit-und-verifikation.md`).
-- **Hook (stärker):** ein `SessionStart`-Hook läuft außerhalb des Modells und kann
-  den Stand bei jedem Sitzungsbeginn melden. Registrierung in `settings.json`.
-  Auf dem Referenzrechner existiert ein `UserPromptSubmit`-Hook (Telegram-Skript) —
-  Beleg, dass Hook-Registrierung hier trägt (Stand 2026-10-12).
+- Die **Begleitnotiz** liegt als `project-`-Memory-Eintrag unter
+  `~/.qoder/projects/<workspace-slug>/memory/` und ist im `MEMORY.md`-Index
+  verlinkt — mehr Apparat braucht sie nicht.
+- **Optionaler Verstärker:** ein `SessionStart`-Hook läuft außerhalb des Modells
+  und kann die Notiz bei jedem Sitzungsbeginn melden. Registrierung in
+  `settings.json`. Auf dem Referenzrechner existiert ein `UserPromptSubmit`-Hook
+  (Telegram-Skript) — Beleg, dass Hook-Registrierung hier trägt (Stand 2026-10-12).
 - Hooks dürfen keine Secrets ins Repo oder in Antworten leiten.
 
 ## Modi bei Qoder

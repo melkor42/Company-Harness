@@ -234,6 +234,36 @@ als solche erkennbar sein; reine Neutralität würde den Einstieg wieder schwer 
 **Anwendung:** Referenzdateien des Skills trennen neutrale Konzepte von Anhängen je Harness; jede
 herstellerspezifische Angabe steht in einem Anhang, nie im Kern.
 
+## 2026-10-12 — harness-mentor auf Essenz reduziert (16 → 10 Dateien)
+
+**Entscheidung (Manuel, 2026-10-12):** Nach dem Bau wird der Skill gegen die Frage geprüft „ist das
+notwendig und hilfreich, oder kann es im Weg stehen" — und auf die Essenz reduziert. Begründung in
+seinen Worten: keine Regeln aufstellen, die im Weg stehen, keine Workflows ohne Notwendigkeit, keine
+Einschränkung der Kreationsvielfalt. Aus seiner eigenen Harness-Arbeit: Es wurden kaum Regeln
+dokumentiert, weil alte entschiedene Regeln den Agenten oft aufhalten statt zu führen — Regeln, die
+führen, sind wichtig; Regeln, die blockieren, sind der Feind.
+
+**Getilgt als Apparat:** `BEGLEITSTAND.md` samt Format-Referenz und Einladungs-Snippet — der Stand
+der Begleitung lebt jetzt als `project-`-Memory-Eintrag (der Mentor benutzt das Gedächtnis, das er
+einrichtet); `auszug.md` — die Führungsgrade waren ohnehin die Vertrauensrampe in der AGENTS.md,
+Übergänge und die letzte Geste stehen jetzt als Absatz in der Begleiten-Disziplin;
+`ehrlichkeit-und-verifikation.md` — Essenz in SKILL-Grundhaltung (Regel ist Bitte, keine Sperre)
+und Block 6 (Ladeprüfung); `gedaechtnis-hygiene.md` — Essenz in Block 5 (Dreiteilung,
+Umkehrbedingung, Fundortpflicht, was nie in den Bestand gehört).
+
+**Quelle better-harness (v0.2.21), gelesen am selben Tag:** Der Skill bleibt separat und wird separat
+aufgerufen. Übernommen nur drei Schärfungen: Schweigen als protokolliertes Standardergebnis mit
+Stufen (drohender Verlust durchbricht das Eine-Regung-Limit); „festgehalten ist nicht angekommen"
+als sechste Spur; die Zwei-Vorkommen-Schwelle deckt sich mit deren 2-Episoden-Disziplin.
+
+**Neu integriert:** „Regeln führen oder blockieren" als Lehre in Block 3; das TL;DR-Verhalten
+(lange Ergebnisse: Kern in wenigen Sätzen zuerst, To-dos der Person sichtbar hervorgehoben) als
+Musterbeispiel einer führenden Regel in Block 3 und der AGENTS.md-Vorlage — und als eigene
+Ausgabedisziplin des Mentors in der Grundhaltung. Quelle: Manuel, Diktat 2026-10-12.
+
+**Anwendung:** Persona-Probeläufe prüfen künftig auch, ob die Essenz-Fassung trägt. Der Delta-Weave-
+Hub-Knoten braucht keinen Nachzug — Produktumfang unverändert, nur schlanker umgesetzt.
+
 ## 2026-10-12 — Probelauf des v1-Skills: zwei Konstruktionsfehler, sofortige Korrektur
 
 **Befund (Manuel als Testnutzer, 2026-10-12):** Der v1-Skill lief als Probelauf in diesem Workspace.

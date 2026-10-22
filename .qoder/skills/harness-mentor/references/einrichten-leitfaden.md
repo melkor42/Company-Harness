@@ -81,15 +81,24 @@ Vorlage: `assets/vorlagen/VISION.md`.
 
 ## Block 3 — Regeln → `AGENTS.md`
 
-Die erste harte Regel steht vor der ersten Frage fest: die Voreinstellung aus
-Block 1 (*eng führen* — Entwürfe vorlegen, vor Handlungen fragen). Sie kommt mit
-dem Einrichtungsdatum in die Datei; jede spätere Lockerung wird als eigene datierte
-Regel darunter angehängt.
+**Regeln führen oder sie blockieren — dazwischen gibt es nichts.** Eine führende
+Regel verbessert jede Antwort, ohne einen einzigen Workflow einzuschränken; Muster:
+„Fasse lange Ergebnisse am Anfang in wenigen Sätzen zusammen und hebe meine To-dos
+sichtbar hervor." Eine Regel, die einen Weg vorschreibt, steht bald im Weg. Und am
+schlimmsten ist die veraltete Regel: Sie wird mit gutem Grund befolgt — sie steht ja
+schwarz auf weiß da — und produziert mit voller Überzeugung das Falsche. Deshalb
+gelten hier drei Maßstäbe: **wenige** Regeln (jede kostet in jeder Session Kontext),
+**nur führende** (gelten für viele Fälle und lassen dem Agenten den Weg frei;
+vorschreibende Regeln nur bei einem benannten Schaden dahinter), **jede
+verfallsanfällige mit Umkehrbedingung** (Block 5 zeigt das Muster).
 
-Fragen: Was soll der Agent **nie** tun? Was soll er **immer** tun? Zwei Grenzen
-beachten: Wenige Regeln (jede kostet in jeder Session Kontext; zehn gute schlagen
-dreißig mittlere). Jede verfallsanfällige Regel bekommt Datum und Umkehrbedingung —
-Details in `gedaechtnis-hygiene.md`.
+Die erste Regel steht vor der ersten Frage fest: die Voreinstellung aus Block 1
+(*eng führen* — Entwürfe vorlegen, vor Handlungen mit Außenwirkung fragen). Sie
+kommt mit dem Einrichtungsdatum in die Datei; jede spätere Lockerung wird als eigene
+datierte Regel darunter angehängt, nie überschrieben.
+
+Fragen: Was soll der Agent **nie** tun? Was soll er **immer** tun? Jede Antwort an
+den drei Maßstäben messen, bevor sie in die Datei darf.
 
 ## Block 4 — Ablage → Ordnerstruktur
 
@@ -116,35 +125,51 @@ als Memory-Eintrag notieren.
 ## Block 5 — Gedächtnis → `memory/` + `MEMORY.md`
 
 In zwei Sätzen erklären, was Memories sind und wo sie bei *seinem* Harness liegen
-(Anhang). Dann:
+(Anhang). Dann `MEMORY.md` aus der Vorlage anlegen (falls der Harness den Ort nicht
+selbst vorgibt) und drei erste Einträge gemeinsam schreiben: ein `user-`-Eintrag
+(Arbeitsweise), ein `feedback-`-Eintrag (die wichtigste Regel aus Block 3, mit
+**Why:** und **How to apply:**), ein `reference-`-Eintrag (wo die Memory-Dateien
+liegen).
 
-- `MEMORY.md` aus der Vorlage anlegen (falls der Harness den Ort nicht selbst vorgibt).
-- Erste Einträge gemeinsam anlegen: ein `user-`-Eintrag (Arbeitsweise), ein
-  `feedback-`-Eintrag (die wichtigste Regel aus Block 3, mit **Why:** und
-  **How to apply:**), ein `reference-`-Eintrag (wo die Memory-Dateien liegen).
-- Jeden Eintrag nach der Dreiteilung aus `gedaechtnis-hygiene.md` einordnen
-  (dauerhafte Präferenz / veränderlicher Zustand / historisches Ereignis);
-  veränderliches bekommt eine Umkehrbedingung.
-- Vereinbaren, **was nie** in Memories gehört: Credentials, Tageszustände, Inhalte
-  aus `private/`.
+Vier Schreibregeln mitgeben — sie verhindern, dass das Gedächtnis zur Falle wird:
+
+- **Dreiteilung.** Jeder Eintrag ist dauerhafte Präferenz, veränderlicher Zustand
+  oder historisches Ereignis — die Art entscheidet den Umgang. Bei „das ist
+  inzwischen erledigt" wird der Zustand geändert, nicht eine zweite Notiz daneben
+  gelegt — sonst taucht die alte später als offene Aufgabe wieder auf.
+- **Umkehrbedingung.** Was veralten kann (Versionen, Pfade, Zuständigkeiten,
+  Zustände), bekommt drei Teile: Datum, die Bedingung, an der man merkt, dass neu
+  entschieden werden muss, und die Anweisung *neu prüfen, nicht annehmen*. Muster:
+  „Deploy läuft über `deploy.sh` (Stand 2026-10-12 — gilt, solange das Skript im
+  Repo liegt; bei Fehler neu prüfen)."
+- **Fundortpflicht.** „Du hast am … gesagt" (mit Fundort) und „mein Eindruck ist"
+  (jederzeit korrigierbar) bleiben unterscheidbar — eine Vertrauensfrage, keine
+  Ordnungsfrage.
+- **Nichts Tägliches, nichts Nachlesbares.** Kein Tageszustand, kein Vorratswissen,
+  keine Duplikate, keine Absichten. Und ausdrücklich vereinbaren, **was nie** in
+  Memories gehört: Credentials, Inhalte aus `private/`.
+
+Gepflegt wird an Anlässen, nicht an Terminen: Bei jeder Richtungsänderung werden
+betroffene Einträge im selben Zug nachgezogen; bei jedem Fehler, der auf einen
+Eintrag zurückgeht, wird der Eintrag repariert oder gelöscht — nicht nur das
+Ergebnis.
 
 ## Block 6 — Abschluss und Übergabe in die Begleitung
 
-1. **Gegenprobe.** Der Nutzer benennt in eigenen Worten die drei Grundbilder — nicht
-   vorlesen, abnehmen. Was hängen bleibt, bleibt; was fehlt, an einem Erlebnis
-   nachfassen statt nachsagen.
-2. **BEGLEITSTAND.md anlegen** aus `assets/vorlagen/BEGLEITSTAND.md`: Führungsgrad
-   „eng geführt" mit Einrichtungsdatum, offene Punkte aus dem Setup.
-3. **Einladung installieren** aus `assets/vorlagen/einladung.md`: maximal drei Zeilen
-   in der immer geladenen Regeldatei (oder als Hook, harness-abhängig — Anhang),
-   mit Ausschalter. Erklären: Diese Zeile ist der Grund, warum der Mentor morgen
-   noch da ist — und dass sie sich jederzeit streichen lässt.
-4. **Die erste Korrektur einplanen** (`didaktik.md`, Anker-Erfahrung 1): einen
+1. **Gegenprobe.** Der Nutzer benennt die drei Grundbilder in eigenen Worten — nicht
+   vorlesen, abnehmen. Was fehlt, an einem Erlebnis nachfassen statt nachsagen.
+2. **Begleitnotiz anlegen.** Ein `project-`-Memory-Eintrag hält fest: Begleitung
+   aktiv, Grad „eng geführt" mit Einrichtungsdatum, offene Punkte aus dem Setup.
+   Mehr Apparat braucht die Begleitung nicht — der Mentor benutzt ab jetzt das
+   Gedächtnis, das er gerade eingerichtet hat.
+3. **Die erste Korrektur einplanen** (`didaktik.md`, Anker-Erfahrung 1): einen
    bewusst überschreibbaren Vorschlag markieren, an dem der Nutzer erlebt, dass
    Korrigieren wirkt.
-5. **Ladeprüfung** (`ehrlichkeit-und-verifikation.md`): einmal zeigen, wie man prüft,
-   ob eine Datei wirklich geladen wird — neue Sitzung, danach fragen.
-6. **Pflegeanlass** vereinbaren: nach der ersten Woche echter Arbeit werden USER.md,
+4. **Ladeprüfung zeigen.** Eine Datei, die nicht geladen wird, ist kein Kontext.
+   Einmal vormachen: etwas Erkennbares in die Regeldatei schreiben, eine neue
+   Sitzung öffnen, danach fragen. Kommt die Antwort ohne Nachlesen, trägt die
+   Datei; kommt sie nicht, ist die Datei Dekoration.
+5. **Pflegeanlass** vereinbaren: nach der ersten Woche echter Arbeit werden USER.md,
    AGENTS.md und die ersten Memories gegen die Wirklichkeit geprüft.
 
 Offenes als `OFFEN` festhalten, nicht weglassen.

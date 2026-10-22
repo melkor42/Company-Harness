@@ -33,10 +33,11 @@ prescribed trust ramp, not a preference interview).
 
 - Trust is operationalisable: predictability, checkability, correctability — with the first working
   correction as the critical trust moment.
-- Architecture in three parts: **invitation** (≤3 always-loaded lines, with off-switch), **program**
-  (the skill), **state** (`BEGLEITSTAND.md`).
+- Architecture in two parts: **program** (the skill) and **state** (a `project` memory entry — the
+  mentor uses the memory system it sets up; the earlier three-part design with invitation snippet and
+  a dedicated `BEGLEITSTAND.md` was cut in the same-day essence pass as unnecessary apparatus).
 - The mentor's default is silence: proactivity only on observable friction signals (threshold: two
-  occurrences), at most one intervention per session.
+  occurrences, with source), at most one intervention per session; silence itself is a logged result.
 - Experience before artefacts: three mental images (foreign worker with limited memory; context as
   the only lever — say, offer, allow; trust as correctability) come before any template.
 - Question discipline: every question states its purpose and must change observable agent behaviour.
@@ -51,6 +52,17 @@ as an artefact. Target audience is universal, not chat-world only: audience plac
 intake and selects examples and pace (fit, not pigeonholing); developers and curious owner-led
 early adopters alike. Development method: real test runs with personas rather than scripted dialogues;
 findings feed the skill, as on 2026-10-12.
+
+**Essence pass (2026-10-12, after build):** Manuel's criterion — nothing that can stand in the way,
+no unnecessary workflows, no constraint on the user's creative range; from his own weeks of harness
+work: blocking rules are the enemy, guiding rules are the point, and stale documented decisions hold
+the agent back. The skill was reduced 16 → 10 files: `BEGLEITSTAND.md` apparatus, invitation snippet,
+and the standalone files for retreat, honesty and memory hygiene were cut; their essence folded into
+the guide, the discipline and the stance. Rule teaching now distinguishes guiding from blocking rules,
+with the TL;DR summary rule (gist first, user to-dos visibly highlighted) as the canonical guiding
+example — and as the mentor's own output discipline. better-harness v0.2.21 was read as a source and
+stays a separate skill; taken over were only silence-with-tiers, "recorded is not loaded", and the
+confirmation that the two-occurrence threshold matches its two-episode discipline.
 
 **Open:** distribution/discoverability (v2 stays manually invoked); whether the explanatory part
 permanently belongs to the product (lens fa76's fork — for now yes, as the didactics core).
